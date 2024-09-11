@@ -8,6 +8,7 @@ import Reviews from "./parts/Review";
 import Form from "./parts/Form";
 import Footer from "../footer/Footer";
 import Map from "./parts/Map";
+import Hover from "./parts/Hover";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Dta />
       <BusinessVerticles />
       <Map />
+      <Hover/>
       <Team />
       <Reviews />
       <Form />
