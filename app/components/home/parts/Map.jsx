@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function () {
   return (
-    <Stack margin={"200px 0 0 0"}>
+    <Stack margin={"200px 0"}>
       <Typography
         sx={{ fontSize: "2.5rem", textAlign: "center", fontWeight: "bold" }}
       >

@@ -2,6 +2,8 @@ import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
 import megan from "./assets/team.png";
+import team2 from "./assets/team2.png";
+import team3 from "./assets/team3.png";
 
 export default function () {
   return (
@@ -38,7 +40,7 @@ export default function () {
         </Stack>
         <Stack height={"50vh"} width={"20vw"} alignItems={"center"}>
           <Box position={"relative"} height={"100%"} width={"100%"}>
-            <Image src={megan} alt="" fill objectFit="contain" sizes="100vw" />
+            <Image src={team2} alt="" fill objectFit="contain" sizes="100vw" />
           </Box>
           <Typography fontSize={"1.2rem"} fontWeight={"bold"}>
             Megan Palms
@@ -47,7 +49,7 @@ export default function () {
         </Stack>
         <Stack height={"50vh"} width={"20vw"} alignItems={"center"}>
           <Box position={"relative"} height={"100%"} width={"100%"}>
-            <Image src={megan} alt="" fill objectFit="contain" sizes="100vw" />
+            <Image src={team3} alt="" fill objectFit="contain" sizes="100vw" />
           </Box>
           <Typography fontSize={"1.2rem"} fontWeight={"bold"}>
             Megan Palms
@@ -56,7 +58,7 @@ export default function () {
         </Stack>
         <Stack height={"50vh"} width={"20vw"} alignItems={"center"}>
           <Box position={"relative"} height={"100%"} width={"100%"}>
-            <Image src={megan} alt="" fill objectFit="contain" sizes="100vw" />
+            <Image src={team2} alt="" fill objectFit="contain" sizes="100vw" />
           </Box>
           <Typography fontSize={"1.2rem"} fontWeight={"bold"}>
             Megan Palms

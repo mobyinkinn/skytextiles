@@ -9,14 +9,14 @@ export default function Dta() {
         <Image src={wool} alt="" fill objectFit="contain" />
       </Box>
       <Stack>
-        <Typography fontWeight={"bold"} fontSize={"3rem"} lineHeight={"1.2"}>
+        <Typography fontWeight={"bold"} fontSize={"4.5rem"} lineHeight={"1.2"}>
           Design
           <br />
           Transform
           <br />
           Accelerate
         </Typography>
-        <Typography fontSize={"0.8rem"} marginTop={"10px"}>
+        <Typography fontSize={"2rem"} marginTop={"10px"}>
           We Revolutionize User Experience <br /> Using Behavioural Science.
         </Typography>
       </Stack>

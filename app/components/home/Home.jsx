@@ -9,6 +9,7 @@ import Form from "./parts/Form";
 import Footer from "../footer/Footer";
 import Map from "./parts/Map";
 import Hover from "./parts/Hover";
+import Enduro from "./parts/EnduroPulse";
 
 export default function Home() {
   return (
@@ -18,9 +19,11 @@ export default function Home() {
       <Dta />
       <BusinessVerticles />
       <Map />
-      <Hover/>
+      <Hover />
       <Team />
       <Reviews />
+      <Box height={"30vh"}></Box>
+      <Enduro />
       <Form />
       <Footer />
     </Box>

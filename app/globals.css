@@ -57,3 +57,17 @@ body {
   font-size: 24px; /* Adjust size as needed */
   color: #f5a8a6; /* Change this to your desired color */
 }
+
+/* .cover-image-animation {
+  position: relative;
+  display: none;
+  left: 100px;
+  clip-path: "polygon(0 0, 100% 0, 100% 100%, 0 100%)";
+  transition: "clip-path 0.5s ease";
+}
+
+.cover-image-animation:hover {
+  display: inline-block;
+  position: absolute;
+  clip-path: "polygon(0 0, 100% 0, 100% 100%, 0 100%)";
+} */

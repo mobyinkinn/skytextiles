@@ -2,9 +2,8 @@
 
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import SmoothScroll from "smooth-scroll";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import yarnImage from "./assets/woolnneedle.gif";
@@ -149,12 +148,12 @@ export default function BusinessVerticles() {
         pin: true,
         pinSpacing: false,
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
   });
   return (
-    <ReactLenis root options={{ lerp: 0.5, duration: 1.5, smoothWheel: true }}>
+    <ReactLenis root options={{ lerp: 2, duration: 1.5, smoothWheel: true }}>
       <Stack margin={"50px 200px"} ref={container}>
         <Typography
           color="#D88684"
