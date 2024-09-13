@@ -8,30 +8,43 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <Stack gap={"30px"}>
-      <Stack direction={"row"} justifyContent={"space-around"}>
-        <Stack>
+      <Stack direction={"row"} justifyContent={"center"} gap={"150px"}>
+        <Stack gap={"10px"}>
           <Typography fontWeight={"bold"}>Product</Typography>
-          <Typography>Employee database</Typography>
-          <Typography>Paypal</Typography>
-          <Typography>Absences</Typography>
-          <Typography>Time tracking</Typography>
-          <Typography>Shift Planner</Typography>
-          <Typography>Recruiting</Typography>
+          <Box color={"#393737"}>
+            <Typography>Employee database</Typography>
+            <Typography>Paypal</Typography>
+            <Typography>Absences</Typography>
+            <Typography>Time tracking</Typography>
+            <Typography>Shift Planner</Typography>
+            <Typography>Recruiting</Typography>
+          </Box>
         </Stack>
-        <Stack>
+        <Stack gap={"10px"}>
           <Typography fontWeight={"bold"}>Information</Typography>
-          <Typography>FAQ</Typography>
-          <Typography>Blog</Typography>
-          <Typography>Support</Typography>
+          <Box color={"#393737"}>
+            <Typography>FAQ</Typography>
+            <Typography>Blog</Typography>
+            <Typography>Support</Typography>
+          </Box>
         </Stack>
-        <Stack>
+        <Stack gap={"10px"}>
           <Typography fontWeight={"bold"}>Company</Typography>
-          <Typography>About us</Typography>
-          <Typography>Careers</Typography>
-          <Typography>Contact us</Typography>
-          <Typography>Lift Media</Typography>
+          <Box color={"#393737"}>
+            <Typography>FAQ</Typography>
+            <Typography>About us</Typography>
+            <Typography>Careers</Typography>
+            <Typography>Contact us</Typography>
+            <Typography>Lift Media</Typography>
+          </Box>
         </Stack>
-        <Stack backgroundColor={"#F9F9F9"} gap={"10px"} padding={"40px"}>
+        <Stack
+          backgroundColor={"#F9F9F9"}
+          gap={"10px"}
+          padding={"40px"}
+          position={"relative"}
+          sx={{ top: "-40px" }}
+        >
           <Typography fontWeight={"bold"}>Subscribe</Typography>
           <Stack direction={"row"}>
             <TextField label="Email address" variant="outlined" />

@@ -9,8 +9,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import yarnImage from "./assets/woolnneedle.gif";
 import fabricImage from "./assets/flower.gif";
 import garmentImage from "./assets/garment.gif";
-import { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
+import { useRef } from "react";
 import ReactLenis from "@studio-freight/react-lenis";
 
 gsap.registerPlugin(useGSAP);

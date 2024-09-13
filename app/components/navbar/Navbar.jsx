@@ -10,7 +10,7 @@ const navData = [
   {
     id: 0,
     name: "Company Profile",
-    route: "",
+    route: "/companyprofile",
     subRoutes: [
       {
         id: 0,
@@ -32,13 +32,13 @@ const navData = [
       },
     ],
   },
-  { id: 1, name: "Infrastructure", route: "", subRoutes: [] },
-  { id: 2, name: "Product Range", route: "", subRoutes: [] },
-  { id: 3, name: "Sustainability", route: "", subRoutes: [] },
+  { id: 1, name: "Infrastructure", route: "/infrastructure", subRoutes: [] },
+  { id: 2, name: "Product Range", route: "/", subRoutes: [] },
+  { id: 3, name: "Sustainability", route: "/sustainability", subRoutes: [] },
   {
     id: 4,
     name: "Clients",
-    route: "",
+    route: "/clients",
     subRoutes: [
       {
         id: 0,
@@ -54,8 +54,8 @@ const navData = [
       },
     ],
   },
-  { id: 5, name: "Why us", route: "", subRoutes: [] },
-  { id: 6, name: "Get in Touch", route: "", subRoutes: [] },
+  { id: 5, name: "Why us", route: "/", subRoutes: [] },
+  { id: 6, name: "Get in Touch", route: "/", subRoutes: [] },
 ];
 
 export default function Navbar() {
@@ -99,7 +99,7 @@ export default function Navbar() {
               <Stack key={el.id}>
                 <Link
                   className="nav-link"
-                  href="/"
+                  href={el.route}
                   onMouseEnter={() => handleShowSubRoutes(el)}
                 >
                   {el.name}
