@@ -16,18 +16,34 @@ export default function ProductAnimated() {
     const height = window.innerHeight;
     gsap.registerPlugin(ScrollTrigger);
     let tl = gsap.timeline();
-
-    tl.to(".yarnsImage", {
-      opacity: 1,
+    tl.to(".content", {
       scrollTrigger: {
-        trigger: ".yarnsImage",
+        trigger: ".images",
         start: "top 15%",
-        end: `+=${height}`,
+        end: "bottom center",
         pin: true,
         scrub: true,
         markers: true,
       },
-    });
+    }).fromTo(
+      ".yarnsImage",
+      {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      },
+      {
+        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+        display: "hidden",
+        // clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+        scrollTrigger: {
+          trigger: ".fabrics",
+          start: "top 15%",
+          end: `+=100`,
+          pin: true,
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
   });
   return (
     <Stack
@@ -35,7 +51,7 @@ export default function ProductAnimated() {
       justifyContent={"space-between"}
       direction={"row"}
     >
-      <Stack width={"60%"}>
+      <Stack width={"60%"} className="content">
         <Stack height={"90vh"} className="yarns">
           <Typography fontSize={"3rem"} fontWeight={"bold"}>
             Yarn
@@ -67,19 +83,32 @@ export default function ProductAnimated() {
           </Typography>
         </Stack>
       </Stack>
-      <Stack width={"35%"}>
+      <Stack width={"35%"} className="images">
         <Image
           className="yarnsImage"
           src={yarns}
           alt=""
           height={300}
           width={500}
-          style={{
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            transition: "all 0.5s ease",
-            opacity: 0,
-          }}
+          style={{}}
         />
+        <Image
+          className="fabricsImage"
+          src={fabric}
+          alt=""
+          height={300}
+          width={500}
+          style={{}}
+        />
+        {/* 
+        <Image
+          className="yarnsImage"
+          src={garments}
+          alt=""
+          height={300}
+          width={500}
+          style={{}}
+        /> */}
       </Stack>
     </Stack>
   );

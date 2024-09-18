@@ -5,6 +5,7 @@ import logo from "./parts/assets/logo.png";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const navData = [
   {
@@ -33,7 +34,7 @@ const navData = [
     ],
   },
   { id: 1, name: "Infrastructure", route: "/infrastructure", subRoutes: [] },
-  { id: 2, name: "Product Range", route: "/", subRoutes: [] },
+  { id: 2, name: "Product Range", route: "/products", subRoutes: [] },
   { id: 3, name: "Sustainability", route: "/sustainability", subRoutes: [] },
   {
     id: 4,
@@ -54,14 +55,15 @@ const navData = [
       },
     ],
   },
-  { id: 5, name: "Why us", route: "/", subRoutes: [] },
-  { id: 6, name: "Get in Touch", route: "/", subRoutes: [] },
+  { id: 5, name: "Why us", route: "/whyus", subRoutes: [] },
+  { id: 6, name: "Get in Touch", route: "/getintouch", subRoutes: [] },
 ];
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
   const [showSubRoutes, setShowSubRoutes] = useState(false);
   const [subRoutes, setSubRoutes] = useState([]);
+  const router = useRouter();
 
   const getTrasformStyles = (isHovered) => ({
     transform: `translateY(${isHovered ? "-100%" : "0"})`,
@@ -91,7 +93,16 @@ export default function Navbar() {
         top={"0"}
       >
         <Box width={"10vw"} height={"100%"} position={"relative"}>
-          <Image src={logo} alt="" fill objectFit="contain" />
+          <Image
+            src={logo}
+            alt=""
+            fill
+            objectFit="contain"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              router.push("/");
+            }}
+          />
         </Box>
         <Box sx={{ display: "flex" }}>
           {navData.map((el, i) => {
