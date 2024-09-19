@@ -21,7 +21,7 @@ export default function Process() {
         start: "top 70%",
         end: "top center",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     }).to(".ball3", {
       x: "+=250",
@@ -31,7 +31,7 @@ export default function Process() {
         start: "top 70%",
         end: "top 40%",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
   });

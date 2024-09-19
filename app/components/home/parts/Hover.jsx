@@ -23,18 +23,20 @@ const coverAnimation = {
   position: "relative",
   ":hover .cover-image": {
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", // Show the hover image on hover
+
     zIndex: 10,
   },
 
   "& .cover-image": {
     clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", // Initially hide the hover image
     transition: "clip-path 0.5s ease", // Smooth transition for hover image
+    transitionDelay: "0.1s",
   },
 };
 const cover = {
   "& .cover-image": {
     clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", // Initially hide the hover image
-    transition: "clip-path 0.5s ease", // Smooth transition for hover image
+    transition: "clip-path 0.3s ease", // Smooth transition for hover image
   },
 };
 
@@ -83,17 +85,28 @@ const images = [
 const Hover = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+  console.log(currentImage);
 
   function setHover(event) {
     let e = event.target.alt;
-    let i = e % 3;
-    setCurrentImage(i);
-    setIsHovered(true);
+    console.log(e);
+    if (e) {
+      let i = e % 3;
+      setCurrentImage(i);
+      setIsHovered(true);
+    } else {
+      setCurrentImage(0);
+    }
   }
 
   return (
     <Stack>
-      <Typography fontSize={"2.5rem"} fontWeight={"bold"} textAlign={"center"}>
+      <Typography
+        marginBottom={"20px"}
+        fontSize={"2.5rem"}
+        fontWeight={"bold"}
+        textAlign={"center"}
+      >
         We work with
       </Typography>
       <Stack
@@ -114,8 +127,7 @@ const Hover = () => {
               onMouseEnter={(e) => setHover(e)}
               onMouseLeave={() => setIsHovered(false)}
               sx={{
-                width: 150,
-                height: 150,
+                height: "150px",
                 position: "relative",
                 overflow: "hidden",
                 display: "flex",
@@ -133,7 +145,7 @@ const Hover = () => {
 
                 "& .hover-image": {
                   clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", // Initially hide the hover image
-                  transition: "clip-path 0.5s ease", // Smooth transition for hover image
+                  transition: "clip-path 1s ease", // Smooth transition for hover image
                 },
                 "& .original-image": {
                   transition: "0.5s ease", // Smooth transition for the original image
@@ -147,8 +159,6 @@ const Hover = () => {
               <Image
                 src={logo.img}
                 alt={`${index + 1}`}
-                // width={100}
-                // height={100}
                 fill
                 objectFit="contain"
                 className="original-image"
@@ -157,9 +167,7 @@ const Hover = () => {
               {/* Hover Image */}
               <Image
                 src={hoverImages[index]}
-                alt={`Hover Logo ${index + 1}`}
-                // width={150}
-                // height={150}
+                alt={`${index + 1}`}
                 fill
                 objectFit="cover"
                 className="hover-image"

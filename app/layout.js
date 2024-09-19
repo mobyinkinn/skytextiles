@@ -15,9 +15,13 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "400", "700"],
   display: "swap",
+  variable: "--font-poppins",
 });
 
 const theme = createTheme({
+  typography: {
+    fontFamily: "var(--font-poppins), sans-serif",
+  },
   breakpoints: {
     values: {
       xs: 0,
@@ -34,9 +38,9 @@ const theme = createTheme({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={poppins.className}>
+    <html lang="en">
       <ThemeProvider theme={theme}>
-        <body>{children}</body>
+        <body className={poppins.className}>{children}</body>
       </ThemeProvider>
     </html>
   );

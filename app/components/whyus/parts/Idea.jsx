@@ -31,8 +31,8 @@ export default function Idea() {
             width={200}
             height={200}
             style={{ cursor: "pointer" }}
-            onMouseEnter={() => setShowIdea(true)}
-            onMouseLeave={() => setShowIdea(false)}
+            onMouseEnter={() => setTimeout(() => setShowIdea(true), 200)}
+            onMouseLeave={() => setTimeout(() => setShowIdea(false), 200)}
           />
           {showIdea && (
             <Stack
@@ -64,8 +64,8 @@ export default function Idea() {
         <Box position={"relative"}>
           <Image
             src={research}
-            onMouseEnter={() => setShowResearch(true)}
-            onMouseLeave={() => setShowResearch(false)}
+            onMouseEnter={() => setTimeout(() => setShowResearch(true), 200)}
+            onMouseLeave={() => setTimeout(() => setShowResearch(false), 200)}
             alt=""
             style={{ cursor: "pointer" }}
             width={200}
@@ -106,8 +106,8 @@ export default function Idea() {
             style={{ cursor: "pointer" }}
             alt=""
             width={200}
-            onMouseEnter={() => setShowTeam(true)}
-            onMouseLeave={() => setShowTeam(false)}
+            onMouseEnter={() => setTimeout(() => setShowTeam(true), 200)}
+            onMouseLeave={() => setTimeout(() => setShowTeam(false), 200)}
             height={200}
           />
           {showTeam && (
