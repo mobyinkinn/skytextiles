@@ -8,7 +8,7 @@ import Hero from "./parts/Hero";
 export default function Touch() {
   return (
     <Stack>
-      <Navbar></Navbar>
+      <Navbar/>
       <Hero />
       <Map />
       <Form />
