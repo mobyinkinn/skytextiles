@@ -34,6 +34,7 @@ export default function Core() {
   return (
     <>
       <Stack
+        display={{ xs: "none", md: "flex" }}
         backgroundColor={"#FB5457"}
         margin={"80px 0 0 0"}
         position={"relative"}
@@ -339,6 +340,8 @@ export default function Core() {
         </Stack>
       </Stack>
       <Stack
+        position={"relative"}
+        top={"-10px"}
         height={"100px"}
         backgroundColor={"#FB5457"}
         width={"100%"}

@@ -1,20 +1,27 @@
 import { Stack, Typography } from "@mui/material";
+import girl from "./assets/wavingGirl.gif";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <Stack backgroundColor={"#FBFBFB"} height={"90vh"} width={"100%"}>
+    <Stack
+      alignItems={"center"}
+      backgroundColor={"#FBFBFB"}
+      height={"90vh"}
+      width={"100%"}
+      overflow={"hidden"}
+    >
       <Typography
-        fontSize={"3rem"}
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
         fontWeight={"bold"}
         textAlign={"center"}
-        margin={"100px 0 10px 0"}
+        margin={"30px 0 10px 0"}
       >
-        {" "}
-        Clients{" "}
+        Clients
       </Typography>
       <Typography
-        fontSize={"2rem"}
-        width={"60vw"}
+        fontSize={{ lg: "2rem", smm: "1.5rem", xs: "1.1rem" }}
+        width={{ md: "60vw", xs: "80%" }}
         textAlign={"center"}
         margin={"0 auto"}
       >
@@ -22,6 +29,7 @@ export default function Hero() {
         Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
         Since The 1500s
       </Typography>
+      <Image src={girl} alt="" height={450} width={600} />
     </Stack>
   );
 }

@@ -13,9 +13,10 @@ export default function () {
       <Navbar />
       <Box
         width={"100%"}
-        height={"80vh"}
+        height={{ lg: "80vh", smm: "50vh", xs: "30vh" }}
         sx={{
           backgroundImage: `url(${banner.src})`,
+          backgroundPosition: "center center",
           backgroundSize: "cover",
         }}
       ></Box>

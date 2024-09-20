@@ -3,8 +3,11 @@ import img from "./assets/our.png";
 
 export default function Our() {
   return (
-    <Stack margin={"100px 70px"} gap={"10px"}>
-      <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
+    <Stack margin={{ md: "100px 70px", xs: "50px 30px" }} gap={"10px"}>
+      <Typography
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+        fontWeight={"bold"}
+      >
         Our <span style={{ color: "#FB5457" }}>Infrastructure</span>
       </Typography>
       <Typography>

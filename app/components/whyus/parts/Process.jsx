@@ -36,69 +36,150 @@ export default function Process() {
     });
   });
   return (
-    <Stack margin={"100px 70px"}>
-      <Typography
-        fontSize={"2.5rem"}
-        fontWeight={"bold"}
-        textAlign={"center"}
-        margin={"50px 0"}
-      >
-        Our Process
-      </Typography>
+    <>
       <Stack
-        className="container"
-        alignItems={"center"}
-        direction={"row"}
-        justifyContent={"center"}
+        display={{ md: "flex", xs: "none" }}
+        margin={{ md: "100px 70px", xs: "50px 30px" }}
       >
-        <Stack
-          alignItems={"center"}
-          justifyContent={"center"}
+        <Typography
+          fontSize={"2.5rem"}
           fontWeight={"bold"}
-          color={"white"}
-          backgroundColor={"#F95658"}
-          height={"300px"}
-          width={"300px"}
-          borderRadius={"50%"}
-          className="ball1"
-          position={"relative"}
-          sx={{
-            left: "300px",
-          }}
+          textAlign={"center"}
+          margin={"50px 0"}
         >
-          Discover
-        </Stack>
+          Our Process
+        </Typography>
         <Stack
+          className="container"
           alignItems={"center"}
+          direction={{ md: "row" }}
           justifyContent={"center"}
-          fontWeight={"bold"}
-          color={"white"}
-          backgroundColor={"#9C3FEB"}
-          height={"300px"}
-          width={"300px"}
-          borderRadius={"50%"}
-          className="ball2"
         >
-          Discover
-        </Stack>
-        <Stack
-          alignItems={"center"}
-          justifyContent={"center"}
-          fontWeight={"bold"}
-          color={"white"}
-          backgroundColor={"#5A59FF"}
-          height={"300px"}
-          width={"300px"}
-          borderRadius={"50%"}
-          className="ball3"
-          position={"relative"}
-          sx={{
-            right: "300px",
-          }}
-        >
-          Discover
+          <Stack
+            alignItems={"center"}
+            justifyContent={"center"}
+            fontWeight={"bold"}
+            color={"white"}
+            backgroundColor={"#F95658"}
+            height={"300px"}
+            width={"300px"}
+            minWidth={"300px"}
+            borderRadius={"50%"}
+            className="ball1"
+            position={"relative"}
+            sx={{
+              left: { md: "300px" },
+            }}
+          >
+            Discover
+          </Stack>
+          <Stack
+            alignItems={"center"}
+            justifyContent={"center"}
+            fontWeight={"bold"}
+            minWidth={"300px"}
+            color={"white"}
+            backgroundColor={"#9C3FEB"}
+            height={"300px"}
+            width={"300px"}
+            borderRadius={"50%"}
+            className="ball2"
+          >
+            Discover
+          </Stack>
+          <Stack
+            alignItems={"center"}
+            justifyContent={"center"}
+            fontWeight={"bold"}
+            color={"white"}
+            backgroundColor={"#5A59FF"}
+            height={"300px"}
+            width={"300px"}
+            minWidth={"300px"}
+            borderRadius={"50%"}
+            className="ball3"
+            position={"relative"}
+            sx={{
+              right: { md: "300px" },
+            }}
+          >
+            Discover
+          </Stack>
         </Stack>
       </Stack>
-    </Stack>
+      <Stack
+        display={{ md: "none", xs: "flex" }}
+        margin={{ md: "100px 70px", xs: "50px 30px" }}
+      >
+        <Typography
+          fontSize={"2.5rem"}
+          fontWeight={"bold"}
+          textAlign={"center"}
+          margin={"50px 0 0 0"}
+        >
+          Our Process
+        </Typography>
+        <Stack
+          alignItems={"center"}
+          direction={{ md: "row" }}
+          justifyContent={"center"}
+        >
+          <Stack
+            alignItems={"center"}
+            justifyContent={"center"}
+            fontWeight={"bold"}
+            color={"white"}
+            backgroundColor={"#F95658"}
+            height={"300px"}
+            width={"300px"}
+            fontSize={"1.5rem"}
+            minWidth={"300px"}
+            borderRadius={"50%"}
+            position={"relative"}
+            sx={{
+              opacity: "0.8",
+              top: "100px",
+              left: { md: "300px" },
+            }}
+          >
+            Discover
+          </Stack>
+          <Stack
+            alignItems={"center"}
+            justifyContent={"center"}
+            fontWeight={"bold"}
+            minWidth={"300px"}
+            color={"white"}
+            fontSize={"1.5rem"}
+            backgroundColor={"#9C3FEB"}
+            height={"300px"}
+            width={"300px"}
+            borderRadius={"50%"}
+          >
+            Discover
+          </Stack>
+          <Stack
+            alignItems={"center"}
+            justifyContent={"center"}
+            fontWeight={"bold"}
+            color={"white"}
+            fontSize={"1.5rem"}
+            backgroundColor={"#5A59FF"}
+            height={"300px"}
+            width={"300px"}
+            minWidth={"300px"}
+            borderRadius={"50%"}
+            position={"relative"}
+            sx={{
+              opacity: "0.8",
+              right: { md: "300px" },
+              top: "-100px",
+            }}
+          >
+            Discover
+          </Stack>
+        </Stack>
+      </Stack>
+    </>
   );
 }

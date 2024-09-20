@@ -12,13 +12,13 @@ export default function Company() {
     <Stack>
       <Navbar />
       <Box
+        height={{ lg: "80vh", smm: "50vh", xs: "30vh" }}
         width={"100%"}
-        height={"80vh"}
         sx={{ backgroundImage: `url(${banner.src})`, backgroundSize: "cover" }}
       ></Box>
       <We />
       <Strength />
-      <Box height={"40vh"}></Box>
+      <Box height={{ md: "40vh" }}></Box>
       <Vision />
       <Core />
       <Footer />

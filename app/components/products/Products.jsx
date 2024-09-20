@@ -10,9 +10,13 @@ export default function Products() {
     <Stack>
       <Navbar />
       <Box
-        height={"80vh"}
+        height={{ lg: "80vh", smm: "50vh", xs: "30vh" }}
         width={"100%"}
-        sx={{ backgroundImage: `url(${banner.src})`, backgroundSize: "cover" }}
+        sx={{
+          backgroundImage: `url(${banner.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+        }}
       ></Box>
       <Pdt />
       <ProductAnimated />

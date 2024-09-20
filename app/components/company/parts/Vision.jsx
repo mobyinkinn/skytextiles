@@ -98,36 +98,50 @@ export default function Vision() {
       <Stack
         direction={"row"}
         justifyContent={"space-between"}
-        margin={"0 10vw"}
+        margin={{ md: "0 10vw", xs: "0 30px" }}
       >
-        <Stack color={"#B0B0B0"} className="titles" height={"50vh"}>
+        <Stack
+          display={{ md: "flex", xs: "none" }}
+          color={"#B0B0B0"}
+          className="titles"
+          height={{ md: "50vh" }}
+        >
           <Typography
             color={"#FB5457"}
-            fontSize={"3.5rem"}
+            fontSize={{ lg: "3.5rem", md: "2.5rem" }}
             fontWeight={"bold"}
             className="visionHead"
           >
             Vision
           </Typography>
           <Typography
-            fontSize={"3.5rem"}
+            fontSize={{ lg: "3.5rem", md: "2.5rem" }}
             fontWeight={"bold"}
             className="missionHead"
           >
             Mission
           </Typography>
           <Typography
-            fontSize={"3.5rem"}
+            fontSize={{ lg: "3.5rem", md: "2.5rem" }}
             fontWeight={"bold"}
             className="valuesHead"
           >
             Values
           </Typography>
         </Stack>
-        <Stack width={"60%"}>
-          <Box height={"90vh"}>
+        <Stack width={{ md: "60%" }}>
+          <Box height={{ md: "90vh" }}>
             <Typography
-              fontSize={"3.5rem"}
+              display={{ md: "none" }}
+              fontWeight={"bold"}
+              marginTop={"20px"}
+              color={"#FB5457"}
+              fontSize={"3rem"}
+            >
+              Vision
+            </Typography>
+            <Typography
+              fontSize={{ lg: "3.5rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="vision"
             >
@@ -135,18 +149,36 @@ export default function Vision() {
               company
             </Typography>
           </Box>
-          <Box height={"90vh"}>
+          <Box height={{ md: "90vh" }}>
             <Typography
-              fontSize={"3.5rem"}
+              display={{ md: "none" }}
+              fontWeight={"bold"}
+              marginTop={"20px"}
+              color={"#9C38F1"}
+              fontSize={"3rem"}
+            >
+              Mission
+            </Typography>
+            <Typography
+              fontSize={{ lg: "3.5rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="mission"
             >
               To enhance and elevate human interaction
             </Typography>
           </Box>
-          <Box height={"90vh"}>
+          <Box height={{ md: "90vh" }}>
             <Typography
-              fontSize={"3.5rem"}
+              display={{ md: "none" }}
+              fontWeight={"bold"}
+              color={"#5A57FF"}
+              marginTop={"20px"}
+              fontSize={"3rem"}
+            >
+              Values
+            </Typography>
+            <Typography
+              fontSize={{ lg: "3.5rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="values"
             >
@@ -156,21 +188,23 @@ export default function Vision() {
         </Stack>
       </Stack>
       <Stack
-        direction={"row"}
-        margin={"0 70px"}
+        direction={{ xs: "column", md: "row" }}
+        margin={{ lg: "0 70px", xs: "30px" }}
+        gap={"20px"}
         justifyContent={"space-between"}
       >
         {data.map((el) => {
           return (
             <Stack
               key={el.id}
-              width={"30%"}
-              height={"40vh"}
+              width={{ md: "30%" }}
+              height={{ md: "40vh" }}
               borderRadius={"10px"}
               gap={"10px"}
               sx={{
                 cursor: "pointer",
-                padding: "50px",
+                padding: { lg: "50px", xs: "30px 30px" },
+                backgroundColor: { md: "white", xs: "#f9f9f9" },
                 "&:hover": {
                   backgroundColor: "#F9F9F9",
                 },

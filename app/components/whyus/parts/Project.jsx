@@ -6,10 +6,14 @@ import CountUp from "react-countup";
 export default function Project() {
   return (
     <Stack margin={"100px 70px"}>
-      <Typography textAlign={"center"} fontSize={"2.5rem"} fontWeight={"bold"}>
+      <Typography
+        textAlign={"center"}
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+        fontWeight={"bold"}
+      >
         Project Details
       </Typography>
-      <Stack direction={"row"} justifyContent={"space-around"}>
+      <Stack direction={{ md: "row" }} justifyContent={"space-around"}>
         <Stack alignItems={"center"}>
           <CountUp
             start={0}

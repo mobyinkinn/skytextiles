@@ -3,11 +3,21 @@ import map from "./assets/Map.png";
 
 export default function Map() {
   return (
-    <Stack margin={"100px 0"}>
-      <Typography fontSize={"2.5rem"} textAlign={"center"} fontWeight={"bold"}>
+    <Stack margin={{ md: "100px 0", xs: "50px 30px" }}>
+      <Typography
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+        textAlign={"center"}
+        width={{ md: "100%", xs: "70%" }}
+        margin={"0 auto"}
+        fontWeight={"bold"}
+      >
         We'd Love To Hear From You
       </Typography>
-      <Typography color={"#F8575A"} textAlign={"center"}>
+      <Typography
+        fontSize={{ md: "1rem", xs: "0.9rem" }}
+        color={"#F8575A"}
+        textAlign={"center"}
+      >
         We Have Offices And Teams All Around The World.
       </Typography>
       <Box

@@ -16,7 +16,12 @@ export default function DidYouKnow() {
           </Typography>
         </Stack>
         <Stack alignItems={"center"}>
-          <Typography fontSize={"5rem"} fontWeight={"bold"} color={"#9C38F1"}>
+          <Typography
+            textAlign={"center"}
+            fontSize={"5rem"}
+            fontWeight={"bold"}
+            color={"#9C38F1"}
+          >
             1.6 Million
           </Typography>
           <Typography width={"50%"} textAlign={"center"}>

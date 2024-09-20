@@ -3,12 +3,20 @@ import img from "./assets/rnd.png";
 
 export default function Rnd() {
   return (
-    <Stack margin={"0 70px"} marginBottom={"150px"} gap={"10px"}>
-      <Typography fontSize={"2.5rem"} fontWeight={"bold"} textAlign={"center"}>
+    <Stack
+      margin={{ md: "0 70px", xs: "0 20px" }}
+      marginBottom={"150px"}
+      gap={"10px"}
+    >
+      <Typography
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+        fontWeight={"bold"}
+        textAlign={"center"}
+      >
         Research And Development
       </Typography>
       <Typography
-        fontSize={"2.5rem"}
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
         fontWeight={"bold"}
         textAlign={"center"}
         color={"#FB5457"}

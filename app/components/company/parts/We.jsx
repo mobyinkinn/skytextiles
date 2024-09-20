@@ -14,8 +14,8 @@ export default function We() {
     // });
   });
   return (
-    <Stack margin={"70px"} gap={"20px"}>
-      <Box fontSize={"3rem"}>
+    <Stack margin={{ md: "70px", xs: "30px" }} gap={"20px"}>
+      <Box fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}>
         <Typewriter
           options={{
             strings: [
@@ -29,7 +29,6 @@ export default function We() {
           }}
         />
       </Box>
-      <Typography className=".head"></Typography>
       <Typography>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever

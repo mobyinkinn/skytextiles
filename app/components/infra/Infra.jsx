@@ -11,7 +11,7 @@ export default function Infra() {
     <Stack>
       <Navbar />
       <Box
-        height={"80vh"}
+        height={{ lg: "80vh", smm: "50vh", xs: "30vh" }}
         width={"100%"}
         sx={{ backgroundImage: `url(${banner.src})`, backgroundSize: "cover" }}
       ></Box>
