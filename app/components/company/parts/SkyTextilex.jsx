@@ -14,20 +14,21 @@ export default function SkyTextiles() {
   return (
     <Stack>
       <Navbar />
-      <Stack margin={"100px 0"}>
+      <Stack margin={{ md: "100px 0", xs: "50px 0" }}>
         <Typography
-          fontSize={"3.5rem"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
           fontWeight={"bold"}
-          width={"65%"}
-          margin={"0 auto"}
+          width={{ md: "65%", xs: "80%" }}
+          margin={"20px auto"}
+          marginTop={"0"}
         >
           We Inspire Trust In The Textile And Leather Industry.
         </Typography>
         <Typography
           textAlign={"center"}
-          width={"50%"}
-          fontSize={"1.2rem"}
+          width={{ md: "50%", xs: "80%" }}
+          fontSize={{ md: "1.2rem", xs: "0.8rem" }}
           margin={"0 auto"}
         >
           Driven By Sustainability And A Dedication To Transparency, Our Work Is
@@ -37,9 +38,10 @@ export default function SkyTextiles() {
       </Stack>
       <Stack
         backgroundColor={"#F9F9F9"}
-        padding={"100px 70px"}
-        direction={"row"}
+        padding={{ md: "100px 70px", xs: "50px 50px" }}
+        direction={{ md: "row" }}
         justifyContent={"space-around"}
+        gap={"20px"}
       >
         <Stack alignItems={"center"}>
           <Image src={handShake} alt="" width={100} height={100} />

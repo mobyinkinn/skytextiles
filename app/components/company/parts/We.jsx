@@ -2,17 +2,23 @@
 
 import { Box, Stack, Typography } from "@mui/material";
 import img from "./assets/We1.png";
-// import Typewriter from "typewriter-effect/dist/core";
 import Typewriter from "typewriter-effect";
-import { useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function We() {
-  useEffect(() => {
-    // let typewriter = new Typewriter(".head", {
-    //   loop: true,
-    //   delay: 75,
-    // });
-  });
+  var settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1.5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "20%",
+  };
+
   return (
     <Stack margin={{ md: "70px", xs: "30px" }} gap={"20px"}>
       <Box fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}>
@@ -45,16 +51,18 @@ export default function We() {
       </Typography>
       <Stack
         direction={"row"}
+        display={{ md: "flex", xs: "none" }}
         height={"60vh"}
         sx={{ justifyContent: "space-between", margin: "40px 0" }}
       >
         <Box
-          width={"20%"}
+          width={"23%"}
           height={"100%"}
           sx={{
             backgroundImage: `url(${img.src})`,
             transition: "filter 0.5s ease",
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             borderRadius: "20px",
             filter: "grayscale(100%)",
             cursor: "pointer",
@@ -64,12 +72,13 @@ export default function We() {
           }}
         ></Box>
         <Box
-          width={"20%"}
+          width={"23%"}
           height={"100%"}
           sx={{
             backgroundImage: `url(${img.src})`,
             transition: "filter 0.5s ease",
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             borderRadius: "20px",
             cursor: "pointer",
             filter: "grayscale(100%)",
@@ -79,11 +88,12 @@ export default function We() {
           }}
         ></Box>
         <Box
-          width={"20%"}
           height={"100%"}
+          width={"23%"}
           sx={{
             backgroundImage: `url(${img.src})`,
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             borderRadius: "20px",
             cursor: "pointer",
             filter: "grayscale(100%)",
@@ -94,13 +104,14 @@ export default function We() {
           }}
         ></Box>
         <Box
-          width={"20%"}
+          width={"23%"}
           height={"100%"}
           sx={{
             backgroundImage: `url(${img.src})`,
             transition: "filter 0.5s ease",
             backgroundSize: "cover",
             borderRadius: "20px",
+            backgroundPosition: "center center",
             filter: "grayscale(100%)",
             cursor: "pointer",
             "&:hover": {
@@ -108,6 +119,78 @@ export default function We() {
             },
           }}
         ></Box>
+      </Stack>
+      <Stack height={"60vh"} display={{ md: "none", xs: "flex" }}>
+        <Slider {...settings}>
+          <Box padding={"10px"}>
+            <Box
+              height={"60vh"}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={"60vh"}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={"60vh"}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={"60vh"}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+        </Slider>
       </Stack>
     </Stack>
   );

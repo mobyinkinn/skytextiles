@@ -138,27 +138,28 @@ export default function Idea() {
           )}
         </Box>
       </Stack>
-      <Stack direction={"row"} gap="30px" display={{ md: "none", xs: "flex" }}>
+      <Stack direction={"row"} gap="20px" display={{ md: "none", xs: "flex" }}>
         <Box position={"relative"}>
           <Image
             src={idea}
             alt=""
-            width={100}
-            height={100}
+            width={90}
+            height={90}
             style={{ cursor: "pointer" }}
             onMouseEnter={() => setTimeout(() => setShowIdea(true), 200)}
             onMouseLeave={() => setTimeout(() => setShowIdea(false), 200)}
           />
           <Stack
             position={"absolute"}
-            width={"100px"}
+            width={"130px"}
             justifyContent={"center"}
             sx={{
-              boxShadow: "2px 3px 10px 5px rgba(0, 0, 0, 0.1)",
-              right: "120%",
-              top: "40px",
+              right: "70%",
+              border: "1px solid #eee",
+              backgroundColor: "white",
+              top: "-40%",
             }}
-            borderRadius={"15px"}
+            borderRadius={"5px"}
             padding={"10px 10px"}
           >
             <Typography
@@ -168,9 +169,8 @@ export default function Idea() {
             >
               IDEA
             </Typography>
-            <Typography textAlign={"center"} fontSize={"0.4rem"}>
-              It is a long established fact that a reader 6ill be distracted by
-              the readable content of a page when looking at its layout.
+            <Typography textAlign={"center"} fontSize={"0.6rem"}>
+              It is a long established fact that a reader t its layout.
             </Typography>
           </Stack>
         </Box>
@@ -181,31 +181,31 @@ export default function Idea() {
             onMouseLeave={() => setTimeout(() => setShowResearch(false), 200)}
             alt=""
             style={{ cursor: "pointer" }}
-            width={100}
-            height={100}
+            width={90}
+            height={90}
           />
           <Stack
             position={"absolute"}
-            width={"300px"}
+            width={"130px"}
             justifyContent={"center"}
+            borderRadius={"5px"}
+            padding={"10px 10px"}
             sx={{
-              boxShadow: "2px 3px 10px 5px rgba(0, 0, 0, 0.1)",
-              left: "120%",
-              top: "40px",
+              border: "1px solid #eee",
+              backgroundColor: "white",
+              left: "70%",
+              top: "-40%",
             }}
-            borderRadius={"15px"}
-            padding={"20px 30px"}
           >
             <Typography
               fontWeight={"bold"}
-              fontSize={"1.6rem"}
+              fontSize={"1rem"}
               textAlign={"center"}
             >
               RESEARCH
             </Typography>
-            <Typography textAlign={"center"} fontSize={"0.7rem"}>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout.
+            <Typography textAlign={"center"} fontSize={"0.6rem"}>
+              It is a long established fact that a reader t its layout.
             </Typography>
           </Stack>
         </Box>
@@ -216,33 +216,33 @@ export default function Idea() {
             src={team}
             style={{ cursor: "pointer" }}
             alt=""
-            width={100}
+            width={90}
             onMouseEnter={() => setTimeout(() => setShowTeam(true), 200)}
             onMouseLeave={() => setTimeout(() => setShowTeam(false), 200)}
-            height={100}
+            height={90}
           />
           <Stack
             position={"absolute"}
-            width={"300px"}
+            width={"130px"}
             justifyContent={"center"}
             sx={{
-              boxShadow: "2px 3px 10px 5px rgba(0, 0, 0, 0.1)",
-              left: "120%",
-              top: "40px",
+              backgroundColor: "white",
+              border: "1px solid #eee",
+              left: "-20px",
+              top: "110%",
             }}
-            borderRadius={"15px"}
-            padding={"20px 30px"}
+            borderRadius={"5px"}
+            padding={"10px 10px"}
           >
             <Typography
               fontWeight={"bold"}
-              fontSize={"1.6rem"}
+              fontSize={"1rem"}
               textAlign={"center"}
             >
               TEAMWORK
             </Typography>
-            <Typography textAlign={"center"} fontSize={"0.7rem"}>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout.
+            <Typography textAlign={"center"} fontSize={"0.6rem"}>
+              It is a long established fact that a reader t its layout.
             </Typography>
           </Stack>
         </Box>
