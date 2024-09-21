@@ -20,30 +20,47 @@ export default function ProductAnimated() {
       scrollTrigger: {
         trigger: ".images",
         start: "top 15%",
+        endTrigger: ".garments",
         end: "bottom center",
         pin: true,
         scrub: true,
         markers: true,
       },
-    }).fromTo(
-      ".yarnsImage",
-      {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      },
-      {
-        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-        display: "hidden",
-        // clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
-        scrollTrigger: {
-          trigger: ".fabrics",
-          start: "top 15%",
-          end: `+=100`,
-          pin: true,
-          scrub: true,
-          markers: true,
+    })
+      .fromTo(
+        ".yarnsImage",
+        {
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         },
-      }
-    );
+        {
+          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+          scrollTrigger: {
+            trigger: ".fabrics",
+            start: "top 15%",
+            end: `+=100`,
+            pin: true,
+            scrub: true,
+            markers: true,
+          },
+        }
+      )
+      .fromTo(
+        ".yarnsImage",
+        {
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        },
+        {
+          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+          scrollTrigger: {
+            trigger: ".fabrics",
+            start: "top 15%",
+            end: `+=100`,
+            pin: true,
+            scrub: true,
+            markers: true,
+          },
+        }
+      );
   });
   return (
     <Stack
@@ -83,23 +100,30 @@ export default function ProductAnimated() {
           </Typography>
         </Stack>
       </Stack>
-      <Stack width={"35%"} className="images">
-        <Image
+      <Stack width={"35%"} className="images" position={"relative"}>
+        <Stack
+          height={"300px"}
+          width={"500px"}
           className="yarnsImage"
-          src={yarns}
-          alt=""
-          height={300}
-          width={500}
-          style={{}}
-        />
-        <Image
+          position={"absolute"}
+          sx={{
+            backgroundImage: `url(${yarns.src})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></Stack>
+        <Stack
+          height={"300px"}
+          width={"500px"}
           className="fabricsImage"
-          src={fabric}
-          alt=""
-          height={300}
-          width={500}
-          style={{}}
-        />
+          position={"absolute"}
+          sx={{
+            backgroundImage: `url(${fabric.src})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></Stack>
+
         {/* 
         <Image
           className="yarnsImage"
