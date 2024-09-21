@@ -7,7 +7,45 @@ import location from "./assets/location.png";
 import time from "./assets/time.png";
 import Image from "next/image";
 
+
 export default function Careers() {
+  const data = [
+    {
+      designation: "Product Designer",
+      Description:
+        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+      type: "Full-time",
+      Remote: "100% Remote",
+    },
+    {
+      designation: "Product Designer",
+      Description:
+        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+      type: "Full-time",
+      Remote: "100% Remote",
+    },
+    {
+      designation: "Product Designer",
+      Description:
+        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+      type: "Full-time",
+      Remote: "100% Remote",
+    },
+    {
+      designation: "Product Designer",
+      Description:
+        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+      type: "Full-time",
+      Remote: "100% Remote",
+    },
+    {
+      designation: "Product Designer",
+      Description:
+        "We're Looking For A Mid-level Product Designer To Join Our Team.",
+      type: "Full-time",
+      Remote: "100% Remote",
+    },
+  ];
   return (
     <Stack>
       <Navbar />
@@ -76,198 +114,77 @@ export default function Careers() {
         >
           Current Job Openings
         </Typography>
-        <Stack
-          margin={{ md: "30px 0", xs: "20px 0px" }}
-          gap={"20px"}
-          sx={{ border: "1px solid black", padding: "30px" }}
-        >
-          <Stack direction={"row"} justifyContent={"space-between"}>
-            <Typography fontSize={"1.8rem"} fontWeight={"bold"}>
-              Product Designer
-            </Typography>
-            <Stack direction={"Row"} gap={"15px"} alignItems={"center"}>
-              <Typography fontSize={"1.6rem"}>Apply Now</Typography>
-              <Image src={arrow} alt="" width={"20"} height={"20"} />
+        {data.map((d) => (
+          <Stack
+            margin={{ md: "30px 0", xs: "20px 0px" }}
+            gap={"20px"}
+            sx={{ border: "1px solid black", padding: "30px" }}
+          >
+            <Stack direction={"row"} justifyContent={"space-between"}>
+              <Typography
+                fontSize={{ lg: "1.8rem", smm: "1.6rem", xs: "1.4rem" }}
+                fontWeight={"bold"}
+              >
+                {d.designation}
+              </Typography>
+              <Stack
+                direction={"Row"}
+                gap={"15px"}
+                alignItems={"center"}
+                display={{ md: "flex", xs: "none" }}
+              >
+                <Typography fontSize={"1.6rem"}>Apply Now</Typography>
+                <Image src={arrow} alt="" width={"20"} height={"20"} />
+              </Stack>
             </Stack>
-          </Stack>
-          <Typography>
-            We're Looking For A Mid-level Product Designer To Join Our Team.
-          </Typography>
-          <Stack direction={"row"} justifyContent={"start"} gap={"20px"}>
-            <Stack
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
-            >
-              <Image src={location} alt="" width={15} height={20} />
-              <Typography>100% Remote</Typography>
-            </Stack>
-            <Stack
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
-            >
-              <Image src={time} alt="" width={20} height={20} />
-              <Typography>Full-Time</Typography>
-            </Stack>
-          </Stack>
-        </Stack>
-        <Stack
-          margin={"30px 0"}
-          gap={"20px"}
-          sx={{ border: "1px solid black", padding: "30px" }}
-        >
-          <Stack direction={"row"} justifyContent={"space-between"}>
-            <Typography fontSize={"1.8rem"} fontWeight={"bold"}>
-              Product Designer
-            </Typography>
-            <Stack direction={"Row"} gap={"15px"} alignItems={"center"}>
-              <Typography fontSize={"1.6rem"}>Apply Now</Typography>
-              <Image src={arrow} alt="" width={"20"} height={"20"} />
-            </Stack>
-          </Stack>
-          <Typography>
-            We're Looking For A Mid-level Product Designer To Join Our Team.
-          </Typography>
-          <Stack direction={"row"} justifyContent={"start"} gap={"20px"}>
-            <Stack
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
-            >
-              <Image src={location} alt="" width={15} height={20} />
-              <Typography>100% Remote</Typography>
+            <Typography>{d.Description}</Typography>
+            <Stack direction={"row"} justifyContent={"start"} gap={"20px"}>
+              <Stack
+                direction={"row"}
+                gap={"10px"}
+                alignItems={"center"}
+                padding={{ md: "5px 20px", sm: "5px 15px" }}
+                sx={{
+                  border: "1px solid black",
+                  width: "fit-content",
+                  borderRadius: "20px",
+                }}
+              >
+                <Image src={location} alt="" width={15} height={20} />
+                <Typography fontSize={{ smm: "20px", sm: "11px" }}>
+                  {d.Remote}
+                </Typography>
+              </Stack>
+              <Stack
+                direction={"row"}
+                gap={"10px"}
+                alignItems={"center"}
+                padding={{ md: "5px 20px", sm: "5px 15px" }}
+                sx={{
+                  border: "1px solid black",
+                  width: "fit-content",
+                  borderRadius: "20px",
+                }}
+              >
+                <Image src={time} alt="" width={20} height={20} />
+                <Typography fontSize={{ smm: "20px", sm: "11px" }}>
+                  {d.type}
+                </Typography>
+              </Stack>
             </Stack>
             <Stack
-              direction={"row"}
-              gap={"10px"}
+              direction={"Row"}
+              gap={"15px"}
               alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
+              display={{ md: "none", smm: "flex" }}
             >
-              <Image src={time} alt="" width={20} height={20} />
-              <Typography>Full-Time</Typography>
+              <Typography fontSize="18px">
+                Apply Now
+              </Typography>
+              <Image src={arrow} alt="" width={"15"} height={"15"} />
             </Stack>
           </Stack>
-        </Stack>
-        <Stack
-          margin={"30px 0"}
-          gap={"20px"}
-          sx={{ border: "1px solid black", padding: "30px" }}
-        >
-          <Stack direction={"row"} justifyContent={"space-between"}>
-            <Typography fontSize={"1.8rem"} fontWeight={"bold"}>
-              Product Designer
-            </Typography>
-            <Stack direction={"Row"} gap={"15px"} alignItems={"center"}>
-              <Typography fontSize={"1.6rem"}>Apply Now</Typography>
-              <Image src={arrow} alt="" width={"20"} height={"20"} />
-            </Stack>
-          </Stack>
-          <Typography>
-            We're Looking For A Mid-level Product Designer To Join Our Team.
-          </Typography>
-          <Stack direction={"row"} justifyContent={"start"} gap={"20px"}>
-            <Stack
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
-            >
-              <Image src={location} alt="" width={15} height={20} />
-              <Typography>100% Remote</Typography>
-            </Stack>
-            <Stack
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
-            >
-              <Image src={time} alt="" width={20} height={20} />
-              <Typography>Full-Time</Typography>
-            </Stack>
-          </Stack>
-        </Stack>
-        <Stack
-          margin={"30px 0"}
-          gap={"20px"}
-          sx={{ border: "1px solid black", padding: "30px" }}
-        >
-          <Stack direction={"row"} justifyContent={"space-between"}>
-            <Typography fontSize={"1.8rem"} fontWeight={"bold"}>
-              Product Designer
-            </Typography>
-            <Stack direction={"Row"} gap={"15px"} alignItems={"center"}>
-              <Typography fontSize={"1.6rem"}>Apply Now</Typography>
-              <Image src={arrow} alt="" width={"20"} height={"20"} />
-            </Stack>
-          </Stack>
-          <Typography>
-            We're Looking For A Mid-level Product Designer To Join Our Team.
-          </Typography>
-          <Stack direction={"row"} justifyContent={"start"} gap={"20px"}>
-            <Stack
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
-            >
-              <Image src={location} alt="" width={15} height={20} />
-              <Typography>100% Remote</Typography>
-            </Stack>
-            <Stack
-              direction={"row"}
-              gap={"10px"}
-              alignItems={"center"}
-              sx={{
-                border: "1px solid black",
-                width: "fit-content",
-                padding: "5px 20px",
-                borderRadius: "20px",
-              }}
-            >
-              <Image src={time} alt="" width={20} height={20} />
-              <Typography>Full-Time</Typography>
-            </Stack>
-          </Stack>
-        </Stack>
+        ))}
       </Stack>
       <Footer />
     </Stack>

@@ -8,10 +8,18 @@ export default function Certifications() {
     <Stack>
       <Navbar />
       <Stack margin={"70px 0"}>
-        <Typography fontSize={"3rem"} fontWeight={"bold"} textAlign={"center"}>
+        <Typography
+          fontSize={{ md: "3rem", sm: "1.9rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           Global Recognition And
         </Typography>
-        <Typography fontSize={"3rem"} fontWeight={"bold"} textAlign={"center"}>
+        <Typography
+          fontSize={{ md: "3rem", sm: "1.9rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           Certifications
         </Typography>
 

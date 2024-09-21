@@ -29,8 +29,8 @@ const coverAnimation = {
 
   "& .cover-image": {
     clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", // Initially hide the hover image
-    transition: "clip-path 0.8s ease", // Smooth transition for hover image
-    transitionDelay: "0.1s",
+    transition: "clip-path 1s ease", // Smooth transition for hover image
+    transitionDelay: "0.2s",
   },
 };
 const cover = {
