@@ -12,14 +12,18 @@ export default function VerticleSetup() {
   return (
     <Stack>
       <Navbar />
-      <Stack margin={"70px 0 50px 0"}>
-        <Typography fontSize={"3rem"} fontWeight={"bold"} textAlign={"center"}>
+      <Stack margin={{ md: "70px 0 50px 0", xs: "20px 30px 30px 30px" }}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           Verticle Setup
         </Typography>
         <Typography
-          width={"60%"}
+          width={{ md: "60%" }}
           margin={"0 auto"}
-          fontSize={"1rem"}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
           textAlign={"center"}
         >
           Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
@@ -29,7 +33,7 @@ export default function VerticleSetup() {
       </Stack>
       <Stack
         width={"100%"}
-        height={"80vh"}
+        height={{ md: "80vh", smm: "60vh", xs: "30vh" }}
         sx={{
           backgroundImage: `url(${banner.src})`,
           backgroundSize: "cover",
@@ -37,42 +41,60 @@ export default function VerticleSetup() {
         }}
       ></Stack>
       <Stack
-        direction={"row"}
-        margin={"100px 100px "}
+        direction={{ md: "row" }}
+        margin={{ lg: "100px 100px", md: "50px", xs: "30px" }}
         justifyContent={"space-between"}
+        gap={"40px"}
       >
-        <Stack width={"30%"} gap={"10px"}>
+        <Stack width={{ md: "30%", xs: "100%" }} gap={"10px"}>
           <Image src={snow} alt="" height={50} width={50} />
-          <Typography fontSize={"2rem"}>Lorem Ipsum </Typography>
-          <Typography>
+          <Typography fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}>
+            Lorem Ipsum
+          </Typography>
+          <Typography fontSize={{ lg: "1rem", xs: "0.7rem" }}>
             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
             Industry Lorem Ipsum Has Been The Industry's Standard Dummy Text.
           </Typography>
         </Stack>
-        <Stack width={"30%"} gap={"10px"}>
+        <Stack width={{ md: "30%", xs: "100%" }} gap={"10px"}>
           <Image src={snow} alt="" height={50} width={50} />
-          <Typography fontSize={"2rem"}>Lorem Ipsum </Typography>
-          <Typography>
+          <Typography fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}>
+            Lorem Ipsum{" "}
+          </Typography>
+          <Typography fontSize={{ lg: "1rem", xs: "0.7rem" }}>
             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
             Industry Lorem Ipsum Has Been The Industry's Standard Dummy Text.
           </Typography>
         </Stack>
-        <Stack width={"30%"} gap={"10px"}>
+        <Stack width={{ md: "30%", xs: "100%" }} gap={"10px"}>
           <Image src={snow} alt="" height={50} width={50} />
-          <Typography fontSize={"2rem"}>Lorem Ipsum </Typography>
-          <Typography>
+          <Typography fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}>
+            Lorem Ipsum
+          </Typography>
+          <Typography fontSize={{ lg: "1rem", xs: "0.7rem" }}>
             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
             Industry Lorem Ipsum Has Been The Industry's Standard Dummy Text.
           </Typography>
         </Stack>
       </Stack>
-      <Stack direction={"row"} alignCenter={"center"}>
-        <Stack width={"50%"} margin={"100px 70px"}>
-          <Typography fontSize={"2rem"}>Lorem Ipsum </Typography>
-          <Typography fontSize={"3rem"} fontWeight={"bold"}>
+      <Stack
+        justifyContent={"space-between"}
+        direction={{ md: "row", xs: "column-reverse" }}
+        alignItems={{ md: "center" }}
+        gap="10px"
+        margin={{ md: "100px 70px", xs: "20px 30px" }}
+      >
+        <Stack width={{ md: "50%" }}>
+          <Typography fontSize={{ md: "2rem", xs: "1.2rem" }}>
             Lorem Ipsum
           </Typography>
-          <Typography>
+          <Typography
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+            fontWeight={"bold"}
+          >
+            Lorem Ipsum
+          </Typography>
+          <Typography fontSize={{ md: "1rem", xs: "0.7rem" }}>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only
@@ -81,23 +103,36 @@ export default function VerticleSetup() {
           </Typography>
         </Stack>
         <Stack
-          width={"30%"}
+          width={{ md: "40%", xs: "80%" }}
           height={"50vh"}
           sx={{
             backgroundImage: `url(${lady.src})`,
             backgroundSize: "cover",
             borderRadius: "10px",
+            backgroundPosition: "right",
           }}
         ></Stack>
       </Stack>
-      <Stack gap={"20px"}>
-        <Typography fontSize={"2rem"} textAlign={"center"}>
+      <Stack gap={{ md: "20px", xs: "5px" }}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+        >
           Lorem Ipsum
         </Typography>
-        <Typography fontSize={"3rem"} textAlign={"center"} fontWeight={"bold"}>
-          Lorem Ipsum
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+          fontWeight={"bold"}
+        >
+          Lorem Ipsumm
         </Typography>
-        <Typography margin={"0 auto"} width={"80%"} textAlign={"center"}>
+        <Typography
+          margin={"0 auto"}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
+          width={"90%"}
+          textAlign={"center"}
+        >
           We At Maral Overseas Limited Endeavor To Believe In The Idea Of
           Sustainability That Is Achieved When People On Earth Can Live Well
           Without Compromising The Quality For Future Generations. Strategies To
@@ -108,7 +143,7 @@ export default function VerticleSetup() {
         <Stack
           justifyContent={"space-between"}
           direction={"row"}
-          margin={"50px 70px"}
+          margin={{ md: "50px 70px", xs: "30px" }}
         >
           <Stack
             width={"23%"}

@@ -10,16 +10,19 @@ export default function Yarns() {
   return (
     <Stack>
       <Navbar />
-      <Stack margin={"70px 100px 30px 100px"}>
+      <Stack margin={{ md: "70px 100px 30px 100px", xs: "50px 30px" }}>
         <Typography
           marginBottom={"10px"}
           textAlign={"center"}
-          fontSize={"3rem"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           fontWeight={"bold"}
         >
           Introduction to Yarns
         </Typography>
-        <Typography textAlign={"center"}>
+        <Typography
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
+          textAlign={"center"}
+        >
           We Are The Largest Producer And One Of The Leading Exporters Of
           Value-added Synthetic And Blended Dyed Spun Yarn In India. We Are Also
           A Prominent Manufacturer Of Cotton Blended Dyed And Mélange Yarn. Some
@@ -34,19 +37,29 @@ export default function Yarns() {
       <Stack
         width={"80%"}
         margin={"0 auto"}
-        height={"40vh"}
+        height={{ md: "40vh", xs: "10vh" }}
         sx={{
           backgroundImage: `url(${banner.src})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
         }}
       ></Stack>
       <Strength />
       <Stack>
-        <Typography fontSize={"3rem"} textAlign={"center"} fontWeight={"bold"}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+          fontWeight={"bold"}
+        >
           Popular Yarns
         </Typography>
-        <Typography textAlign={"center"} width={"80%"} margin={"10px auto"}>
+        <Typography
+          textAlign={"center"}
+          width={"80%"}
+          margin={"10px auto"}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
+        >
           Amazing finished knitting, crochet, and weaving projects start with
           amazing yarn. WEBS is committed to sourcing and producing the best
           quality we can find and bringing them direct to you at stashable
@@ -54,11 +67,14 @@ export default function Yarns() {
         </Typography>
         <Stack
           marginTop={"30px"}
+          flexWrap={"wrap"}
           direction={"row"}
-          justifyContent={"space-between"}
+          gap={{ md: "20px", xs: "20px" }}
+          margin={{ md: "70px 100px 30px 100px", xs: "50px 30px" }}
+          justifyContent={"center"}
         >
           <Box
-            width={"22%"}
+            width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
               backgroundImage: `url(${yarns.src})`,
@@ -68,7 +84,7 @@ export default function Yarns() {
             }}
           ></Box>
           <Box
-            width={"22%"}
+            width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
               backgroundImage: `url(${yarns.src})`,
@@ -78,7 +94,7 @@ export default function Yarns() {
             }}
           ></Box>
           <Box
-            width={"22%"}
+            width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
               backgroundImage: `url(${yarns.src})`,
@@ -88,7 +104,7 @@ export default function Yarns() {
             }}
           ></Box>
           <Box
-            width={"22%"}
+            width={{ md: "22%", xs: "40%" }}
             height={"30vh"}
             sx={{
               backgroundImage: `url(${yarns.src})`,

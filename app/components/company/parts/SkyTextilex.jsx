@@ -71,22 +71,32 @@ export default function SkyTextiles() {
           </Typography>
         </Stack>
       </Stack>
-      <Stack margin={"100px 70px"}>
+      <Stack margin={{ md: "100px 70px", xs: "50px 30px" }}>
         <Typography
-          fontSize={"3rem"}
-          width={"50%"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.3rem" }}
+          width={{ md: "50%", xs: "100%" }}
           fontWeight={"bold"}
-          margin={"0 auto"}
+          margin={"20px auto"}
           textAlign={"center"}
         >
           What We Offer As A Garment Manufacture
         </Typography>
-        <Typography width={"70%"} margin={"0 auto"} textAlign={"center"}>
+        <Typography
+          width={{ md: "70%" }}
+          margin={"0 auto"}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
+          textAlign={"center"}
+        >
           We Guarantee The Highest Quality Standards And Timely Delivery For All
           Customer’s Needs. With Our Strengths, As Listed Below, We Provide Many
           Advantages Over Competitors In The Textile Manufacturing Industry.
         </Typography>
-        <Typography width={"70%"} margin={"10px auto"} textAlign={"center"}>
+        <Typography
+          width={{ md: "70%" }}
+          margin={"10px auto"}
+          textAlign={"center"}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
+        >
           Planning ability with high sell-through rates. The Well-established
           workflow of design lead product planning that matches customer’s need
           with high sell-through rates, backed by cutting-edge information
@@ -144,18 +154,18 @@ export default function SkyTextiles() {
       </Stack>
       <Stack backgroundColor={"#FB5457"}>
         <Stack
-          direction={"row"}
+          direction={{ md: "row", xs: "column-reverse" }}
           justifyContent={"space-between"}
-          gap={"40px"}
+          gap={{ md: "40px", xs: "10px" }}
           alignItems={"center"}
           backgroundColor={"#F9F9F9"}
-          margin={"70px 100px"}
-          padding={"40px"}
+          margin={{ lg: "70px 100px", xs: "40px 30px" }}
+          padding={{ md: "40px", xs: "10px" }}
         >
           <Stack>
             <Typography
               fontWeight={"bold"}
-              fontSize={"1.7rem"}
+              fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
               color={"#FB5457"}
               marginBottom={"20px"}
             >
@@ -210,25 +220,38 @@ export default function SkyTextiles() {
               </Typography>
             </Stack>
           </Stack>
-          <Stack width={"40%"} height={"300px"} position={"relative"}>
+          <Stack
+            width={{ lg: "40%", md: "50%", xs: "90%" }}
+            height={"300px"}
+            position={"relative"}
+          >
             <Image src={tree} fill objectFit="contain" />
           </Stack>
         </Stack>
       </Stack>
       <Stack
-        direction={"row"}
-        margin={"100px 70px"}
-        gap={"50px"}
+        direction={{ md: "row", xs: "column-reverse" }}
+        margin={{ md: "100px 70px", xs: "50px 30px" }}
+        gap={"10px"}
+        alignItems={"center"}
         sx={{
           backgroundImage: `url(${bg.src})`,
           backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
         }}
       >
-        <Stack gap={"10px"}>
-          <Typography fontSize={"2.5rem"} fontWeight={"bold"}>
+        <Stack gap={"10px"} width={{ md: "50%", smm: "70%", xs: "100%" }}>
+          <Typography
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+            fontWeight={"bold"}
+          >
             What Is Lorem Ipsum?
           </Typography>
-          <Typography width={"70%"}>
+          <Typography
+            fontSize={{ md: "1rem", xs: "0.7rem" }}
+            width={{ md: "70%" }}
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
@@ -246,29 +269,46 @@ export default function SkyTextiles() {
             Button
           </button>
         </Stack>
-        <Stack width={"50%"} height={"40vh"} position={"relative"}>
-          <Image src={maskGroup} alt="" fill objectFit="contain" />
-        </Stack>
+        <Stack
+          width={{ md: "50%", xs: "100%" }}
+          height={{ md: "30vw", xs: "30vh" }}
+          sx={{
+            backgroundImage: `url(${maskGroup.src})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></Stack>
       </Stack>
 
-      <Stack margin={"100px 0"}>
-        <Typography fontSize={"3rem"} textAlign={"center"} fontWeight={"bold"}>
+      <Stack margin={{ md: "50px 0", xs: "30px 0" }}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+          fontWeight={"bold"}
+        >
           Milestones
         </Typography>
-        <Typography textAlign={"center"} width={"60%"} margin={"0 auto"}>
+        <Typography
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
+          textAlign={"center"}
+          width={"60%"}
+          margin={"0 auto"}
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s.
         </Typography>
         <Stack
-          direction={"row"}
+          direction={{ md: "row" }}
           justifyContent={"center"}
-          gap={"70px"}
+          gap={"20px"}
           margin={"30px 0"}
         >
           <Stack
-            width={"150px"}
-            height={"150px"}
+            minWidth={{ lg: "150px", xs: "100px" }}
+            maxWidth={{ lg: "150px", xs: "100px" }}
+            height={{ lg: "150px", xs: "100px" }}
             backgroundColor="#FB5457"
             borderRadius={"50%"}
             alignItems={"center"}
@@ -278,8 +318,9 @@ export default function SkyTextiles() {
             Discover
           </Stack>
           <Stack
-            width={"150px"}
-            height={"150px"}
+            minWidth={{ lg: "150px", xs: "100px" }}
+            maxWidth={{ lg: "150px", xs: "100px" }}
+            height={{ lg: "150px", xs: "100px" }}
             backgroundColor="#FB5457"
             borderRadius={"50%"}
             alignItems={"center"}
@@ -289,8 +330,9 @@ export default function SkyTextiles() {
             Discover
           </Stack>
           <Stack
-            width={"150px"}
-            height={"150px"}
+            minWidth={{ lg: "150px", xs: "100px" }}
+            maxWidth={{ lg: "150px", xs: "100px" }}
+            height={{ lg: "150px", xs: "100px" }}
             backgroundColor="#FB5457"
             borderRadius={"50%"}
             alignItems={"center"}
@@ -300,8 +342,9 @@ export default function SkyTextiles() {
             Discover
           </Stack>
           <Stack
-            width={"150px"}
-            height={"150px"}
+            minWidth={{ lg: "150px", xs: "100px" }}
+            maxWidth={{ lg: "150px", xs: "100px" }}
+            height={{ lg: "150px", xs: "100px" }}
             backgroundColor="#FB5457"
             borderRadius={"50%"}
             alignItems={"center"}
@@ -311,8 +354,21 @@ export default function SkyTextiles() {
             Discover
           </Stack>
           <Stack
-            width={"150px"}
-            height={"150px"}
+            minWidth={{ lg: "150px", xs: "100px" }}
+            maxWidth={{ lg: "150px", xs: "100px" }}
+            height={{ lg: "150px", xs: "100px" }}
+            backgroundColor="#FB5457"
+            borderRadius={"50%"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            color={"white"}
+          >
+            Discover
+          </Stack>
+          <Stack
+            minWidth={{ lg: "150px", xs: "100px" }}
+            maxWidth={{ lg: "150px", xs: "100px" }}
+            height={{ lg: "150px", xs: "100px" }}
             backgroundColor="#FB5457"
             borderRadius={"50%"}
             alignItems={"center"}

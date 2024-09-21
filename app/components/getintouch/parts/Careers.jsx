@@ -13,31 +13,52 @@ export default function Careers() {
       <Navbar />
       <Stack
         direction={"row"}
-        margin={"0 70px"}
+        margin={{ md: "0 70px", xs: "30px" }}
         alignItems={"center"}
-        height={"70vh"}
+        height={{ md: "70vh" }}
       >
         <Stack>
-          <Typography fontSize={"4.5rem"} fontWeight={"bold"}>
+          <Typography
+            fontSize={{ lg: "4.5rem", smm: "3rem", xs: "2rem" }}
+            fontWeight={"bold"}
+          >
             Want To Join
           </Typography>
-          <Typography fontSize={"4.5rem"} fontWeight={"bold"}>
+          <Typography
+            fontSize={{ lg: "4.5rem", smm: "3rem", xs: "2rem" }}
+            fontWeight={"bold"}
+          >
             The Team ?
           </Typography>
-          <Typography fontSize={"2rem"} fontWeight={"bold"}>
+          <Typography
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1rem" }}
+            fontWeight={"bold"}
+          >
             Be Our Next Human Experience
           </Typography>
-          <Typography fontSize={"2rem"} fontWeight={"bold"}>
+          <Typography
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1rem" }}
+            fontWeight={"bold"}
+          >
             Designer
           </Typography>
         </Stack>
-        <Stack></Stack>
       </Stack>
       <Stack>
-        <Typography fontSize={"3rem"} textAlign={"center"} fontWeight={"bold"}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={"center"}
+          fontWeight={"bold"}
+          margin={{ md: "0", xs: "0 30px" }}
+        >
           Why Join Sky Textiles?
         </Typography>
-        <Typography width={"80%"} margin={"10px auto"} textAlign={"center"}>
+        <Typography
+          width={"80%"}
+          margin={"10px auto"}
+          textAlign={"center"}
+          fontSize={{ ms: "1rem", xs: "0.7rem" }}
+        >
           We At Maral Overseas Limited Endeavor To Believe In The Idea Of
           Sustainability That Is Achieved When People On Earth Can Live Well
           Without Compromising The Quality For Future Generations. Strategies To
@@ -46,17 +67,17 @@ export default function Careers() {
           Consumption And Recycling.
         </Typography>
       </Stack>
-      <Stack margin={"100px 70px"}>
+      <Stack margin={{ md: "100px 70px", xs: "30px" }}>
         <Typography
-          fontSize={"3rem"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           textAlign={"center"}
-          marginBottom={"50px"}
+          marginBottom={{ md: "50px" }}
           fontWeight={"600"}
         >
           Current Job Openings
         </Typography>
         <Stack
-          margin={"30px 0"}
+          margin={{ md: "30px 0", xs: "20px 0px" }}
           gap={"20px"}
           sx={{ border: "1px solid black", padding: "30px" }}
         >

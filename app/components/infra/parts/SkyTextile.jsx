@@ -10,6 +10,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 import banner from "./assets/banner2.png";
+import mobileBanner from "./assets/mobileBanner.png";
 import enterprise from "./assets/enterprise.png";
 import buildings from "./assets/buildings.png";
 import launch from "./assets/launch.png";
@@ -63,40 +64,54 @@ export default function SkyTextiles() {
         height={"80vh"}
         width={"100%"}
         sx={{
-          backgroundImage: `url(${banner.src})`,
+          backgroundImage: {
+            md: `url(${banner.src})`,
+            xs: `url(${mobileBanner.src})`,
+          },
           backgroundSize: "cover",
+          backgroundPosition: { md: "center right", xs: "center bottom" },
         }}
-        padding={"0 70px"}
+        padding={{ md: "0 70px", xs: "50px 30px" }}
         justifyContent={"center"}
       >
-        <Typography fontSize={"3rem"} fontWeight={"bold"}>
+        <Typography
+          marginTop={{ xs: "20vh", md: "0px" }}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+        >
           It Is A Long
         </Typography>
-        <Typography fontSize={"3rem"} fontWeight={"bold"}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+        >
           Established Fact.
         </Typography>
-        <Typography width={"40%"}>
+        <Typography width={"40%"} fontSize={{ md: "1rem", xs: "0.7rem" }}>
           There Are Many Variations of Passages of Lorem Ipsum Available, But
           The Majority Have Suffered Alteration In Some Form, By Injected
           Humour, or Randomised Words Which Don't Look Even Slightly Believable.
         </Typography>
       </Stack>
-      <Stack margin={"70px"}>
+      <Stack margin={{ md: "70px", xs: "30px" }}>
         <Stack
-          direction={"row"}
+          direction={{ md: "row" }}
           paddingRight={"10vw"}
           width={"100%"}
           justifyContent={"space-between"}
-          alignItems={"center"}
+          alignItems={{ md: "center", xs: "start" }}
         >
           <Stack>
             <Typography>We Advice More Than.</Typography>
-            <Typography fontSize={"3rem"} fontWeight={"bold"}>
+            <Typography
+              fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+              fontWeight={"bold"}
+            >
               We Advice More Than
             </Typography>
             <Typography
               marginBottom={"20px"}
-              fontSize={"3rem"}
+              fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
               fontWeight={"bold"}
             >
               1500 Companies.
@@ -171,7 +186,7 @@ export default function SkyTextiles() {
       <Stack position={"relative"}>
         <Typography
           margin={"0 auto"}
-          fontSize={"3rem"}
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           fontWeight={"bold"}
           textAlign={"center"}
           width={"60%"}
@@ -194,29 +209,29 @@ export default function SkyTextiles() {
         <Box height={"350px"}></Box>
         <Stack
           justifyContent={"center"}
-          gap={"50px"}
+          gap={{ smm: "50px", xs: "15px" }}
           backgroundColor={"#FB5457"}
           direction={"row"}
-          padding={"100px 70px"}
-          sx={{}}
+          padding={{ md: "100px 70px", xs: "50px 10px" }}
+          flexWrap={{ xs: "wrap", md: "nowrap" }}
         >
           <Stack
-            width={"200px"}
-            height={"200px"}
+            width={{ smm: "200px", xs: "130px" }}
+            height={{ smm: "200px", xs: "130px" }}
             alignItems={"center"}
             justifyContent={"center"}
             borderRadius={"10px"}
             backgroundColor={"white"}
             zIndex={"20"}
           >
-            <Typography>Award Won</Typography>
-            <Typography fontWeight={"bold"} color={"#FB5457"} fontSize={"3rem"}>
+            <Typography fontSize={"1rem"}>Award Won</Typography>
+            <Typography fontSize={"3rem"} fontWeight={"bold"} color={"#FB5457"}>
               17
             </Typography>
           </Stack>
           <Stack
-            width={"200px"}
-            height={"200px"}
+            width={{ smm: "200px", xs: "130px" }}
+            height={{ smm: "200px", xs: "130px" }}
             alignItems={"center"}
             justifyContent={"center"}
             borderRadius={"10px"}
@@ -229,8 +244,8 @@ export default function SkyTextiles() {
             </Typography>
           </Stack>
           <Stack
-            width={"200px"}
-            height={"200px"}
+            width={{ smm: "200px", xs: "130px" }}
+            height={{ smm: "200px", xs: "130px" }}
             alignItems={"center"}
             justifyContent={"center"}
             borderRadius={"10px"}
@@ -243,8 +258,8 @@ export default function SkyTextiles() {
             </Typography>
           </Stack>
           <Stack
-            width={"200px"}
-            height={"200px"}
+            width={{ smm: "200px", xs: "130px" }}
+            height={{ smm: "200px", xs: "130px" }}
             alignItems={"center"}
             justifyContent={"center"}
             borderRadius={"10px"}
@@ -259,11 +274,20 @@ export default function SkyTextiles() {
           </Stack>
         </Stack>
       </Stack>
-      <Stack margin={"100px 70px"}>
-        <Typography fontSize={"3rem"} fontWeight={"bold"} textAlign={"center"}>
+      <Stack margin={{ md: "100px 70px", xs: "50px 30px" }}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           3 Ease and Fast Steps
         </Typography>
-        <Typography width={"80%"} margin={"0 auto"} textAlign={"center"}>
+        <Typography
+          fontSize={{ md: "1rem", xs: "0.8rem" }}
+          width={{ md: "80%" }}
+          margin={"0 auto"}
+          textAlign={"center"}
+        >
           Innovation drives us forward, and our dedicated R&D centre plays a
           vital role in fostering breakthroughs in our industry. Our team of
           experienced researchers, designers, and engineers work tirelessly to.

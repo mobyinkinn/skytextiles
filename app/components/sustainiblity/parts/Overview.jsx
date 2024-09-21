@@ -86,15 +86,19 @@ export default function Overview() {
       <Stack
         gap={"20px"}
         margin={"50px 0"}
-        padding={"60px 70px"}
+        padding={{ md: "60px 70px", xs: "30px" }}
         backgroundColor={"#f9f9f9"}
       >
-        <Typography fontSize={"3rem"} fontWeight={"bold"} textAlign={"center"}>
+        <Typography
+          fontSize={{ lg: "3rem", md: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           Our Legacy
         </Typography>
         <Typography
-          width={"80%"}
-          fontSize={"1rem"}
+          width={{ md: "80%" }}
+          fontSize={{ md: "1rem", xs: "0.8rem" }}
           margin={"0 auto"}
           textAlign={"center"}
         >
@@ -102,7 +106,10 @@ export default function Overview() {
           Textiles and Industries is today the flagship textiles company of the
           illustrious KK Birla Group.
         </Typography>
-        <Typography textAlign={"center"} fontSize={"1rem"}>
+        <Typography
+          textAlign={"center"}
+          fontSize={{ md: "1rem", xs: "0.8rem" }}
+        >
           Our roots date back to pre-Independence India, when Sutlej was set up
           as a composite textile mill at Okara as Sutlej Cotton Mills Limited in
           1934, in the undivided province of Punjab. Even in those times, it
@@ -114,7 +121,7 @@ export default function Overview() {
           diversified into synthetic blended yarn.
         </Typography>
         <Box
-          width={"50%"}
+          width={{ md: "50%", xs: "100%" }}
           height={"55vh"}
           margin={"20px auto"}
           sx={{
@@ -126,19 +133,23 @@ export default function Overview() {
         ></Box>
       </Stack>
       <Stack margin={"50px 70px"}>
-        <Typography fontSize={"3rem"} fontWeight={"bold"} textAlign={"center"}>
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           Our Goals
         </Typography>
         <Stack
-          direction={"row"}
-          justifyContent={"center"}
-          marginTop={"50px"}
+          direction={{ md: "row" }}
+          justifyContent={{ md: "center" }}
+          marginTop={{ md: "50px", xs: "20px" }}
           position={"relative"}
         >
           <Stack
-            width={"300px"}
-            height={"300px"}
-            fontSize={"3rem"}
+            width={{ md: "300px", xs: "200px" }}
+            height={{ md: "300px", xs: "200px" }}
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
             fontWeight={"bold"}
             justifyContent={"center"}
             alignItems={"center"}
@@ -146,7 +157,7 @@ export default function Overview() {
             sx={{
               border: "1px solid black",
               borderRadius: "50%",
-              left: "20px",
+              left: { md: "20px" },
               cursor: "pointer",
               transition: "all 0.5s ease",
               "&:hover": {
@@ -160,15 +171,16 @@ export default function Overview() {
             Vision
           </Stack>
           <Stack
-            width={"300px"}
-            height={"300px"}
-            fontSize={"3rem"}
+            width={{ md: "300px", xs: "200px" }}
+            height={{ md: "300px", xs: "200px" }}
+            fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
             fontWeight={"bold"}
             justifyContent={"center"}
             alignItems={"center"}
             position={"relative"}
             sx={{
-              left: "-20px",
+              left: { md: "-20px" },
+              top: { md: "0px", xs: "-40px" },
               border: "1px solid black",
               borderRadius: "50%",
               cursor: "pointer",
@@ -185,13 +197,21 @@ export default function Overview() {
         </Stack>
       </Stack>
       <Strength />
-      <Stack gap={"20px"} margin={"40px 70px"} marginBottom={"100px"}>
-        <Typography fontSize={"3rem"} fontWeight={"bold"} textAlign={"center"}>
+      <Stack
+        gap={"20px"}
+        margin={{ md: "40px 70px", xs: "30px" }}
+        marginBottom={"100px"}
+      >
+        <Typography
+          fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           Future Initiatives
         </Typography>
         <Typography
-          width={"70%"}
-          fontSize={"1rem"}
+          width={{ md: "70%" }}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
           margin={"0 auto"}
           textAlign={"center"}
         >
@@ -203,10 +223,10 @@ export default function Overview() {
           Consumption And Recycling.
         </Typography>
         <Typography
-          width={"90%"}
+          width={{ md: "90%" }}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
           margin={"0 auto"}
           textAlign={"center"}
-          fontSize={"1rem"}
         >
           Sustainability And Innovation Is Engrained Into The Culture Of Maral
           Starting From Sustainability In Production Designs, Sustainable
