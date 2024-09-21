@@ -120,11 +120,11 @@ export default function We() {
           }}
         ></Box>
       </Stack>
-      <Stack height={"60vh"} display={{ md: "none", xs: "flex" }}>
+      <Stack height={{ smm: "60vh" }} display={{ md: "none", xs: "flex" }}>
         <Slider {...settings}>
           <Box padding={"10px"}>
             <Box
-              height={"60vh"}
+              height={{ smm: "60vh", xs: "30vh" }}
               sx={{
                 backgroundImage: `url(${img.src})`,
                 transition: "filter 0.5s ease",
@@ -141,7 +141,7 @@ export default function We() {
           </Box>
           <Box padding={"10px"}>
             <Box
-              height={"60vh"}
+              height={{ smm: "60vh", xs: "30vh" }}
               sx={{
                 backgroundImage: `url(${img.src})`,
                 transition: "filter 0.5s ease",
@@ -158,7 +158,7 @@ export default function We() {
           </Box>
           <Box padding={"10px"}>
             <Box
-              height={"60vh"}
+              height={{ smm: "60vh", xs: "30vh" }}
               sx={{
                 backgroundImage: `url(${img.src})`,
                 transition: "filter 0.5s ease",
@@ -175,7 +175,7 @@ export default function We() {
           </Box>
           <Box padding={"10px"}>
             <Box
-              height={"60vh"}
+              height={{ smm: "60vh", xs: "30vh" }}
               sx={{
                 backgroundImage: `url(${img.src})`,
                 transition: "filter 0.5s ease",

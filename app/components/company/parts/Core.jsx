@@ -341,12 +341,105 @@ export default function Core() {
       </Stack>
       <Stack
         position={"relative"}
-        top={"-10px"}
-        height={"100px"}
+        top={"-2px"}
+        height={{ md: "100px" }}
         backgroundColor={"#FB5457"}
         width={"100%"}
-        margin={"0 0 100px 0"}
-      ></Stack>
+        margin={{ md: "0 0 100px 0", xs: "0" }}
+      >
+        <Stack
+          display={{ md: "none" }}
+          color={"white"}
+          margin={{ smm: "70px", xs: "30px" }}
+          gap={"40px"}
+        >
+          <Typography
+            fontSize={{ smm: "2rem", xs: "1.2rem" }}
+            textAlign={"center"}
+          >
+            Core Values
+          </Typography>
+          <Stack
+            direction={"row"}
+            flexWrap={"wrap"}
+            justifyContent={"space-between"}
+            gap={{ smm: "30px", xs: "10px" }}
+          >
+            <Stack>
+              <Stack
+                width={"80px"}
+                height={"80px"}
+                backgroundColor={"white"}
+                padding={"15px"}
+                borderRadius={"100%"}
+                sx={{}}
+              >
+                <Image src={icon6} alt="" width={50} height={50} />
+              </Stack>
+            </Stack>
+            <Stack>
+              <Stack
+                width={"80px"}
+                height={"80px"}
+                backgroundColor={"white"}
+                padding={"15px"}
+                borderRadius={"100%"}
+                sx={{}}
+              >
+                <Image src={icon6} alt="" width={50} height={50} />
+              </Stack>
+            </Stack>
+            <Stack>
+              <Stack
+                width={"80px"}
+                height={"80px"}
+                backgroundColor={"white"}
+                padding={"15px"}
+                borderRadius={"100%"}
+                sx={{}}
+              >
+                <Image src={icon6} alt="" width={50} height={50} />
+              </Stack>
+            </Stack>
+            <Stack>
+              <Stack
+                width={"80px"}
+                height={"80px"}
+                backgroundColor={"white"}
+                padding={"15px"}
+                borderRadius={"100%"}
+                sx={{}}
+              >
+                <Image src={icon6} alt="" width={50} height={50} />
+              </Stack>
+            </Stack>
+            <Stack>
+              <Stack
+                width={"80px"}
+                height={"80px"}
+                backgroundColor={"white"}
+                padding={"15px"}
+                borderRadius={"100%"}
+                sx={{}}
+              >
+                <Image src={icon6} alt="" width={50} height={50} />
+              </Stack>
+            </Stack>
+            <Stack>
+              <Stack
+                width={"80px"}
+                height={"80px"}
+                backgroundColor={"white"}
+                padding={"15px"}
+                borderRadius={"100%"}
+                sx={{}}
+              >
+                <Image src={icon6} alt="" width={50} height={50} />
+              </Stack>
+            </Stack>
+          </Stack>
+        </Stack>
+      </Stack>
     </>
   );
 }

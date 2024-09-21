@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import banner from "./assets/yarnsBanner.png";
+import bannerMobile from "./assets/yarnsBannerMobile.png";
 import Navbar from "../../navbar/Navbar";
 import Strength from "./Strength";
 import yarns from "./assets/popularYarns.png";
@@ -117,11 +118,22 @@ export default function Yarns() {
       </Stack>
       <Stack
         width={"100%"}
-        height={"100vh"}
-        margin={"100px 0"}
+        height={{
+          xl: "800px",
+          lg: "600px",
+          md: "500px",
+          smm: "700px",
+          sm: "500px",
+          xs: "300px",
+        }}
+        margin={{ xl: "0 0 50px 0" }}
         sx={{
-          backgroundImage: `url(${gradient.src})`,
+          backgroundImage: {
+            md: `url(${gradient.src})`,
+            xs: `url(${bannerMobile.src})`,
+          },
           backgroundSize: "contain",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       ></Stack>
