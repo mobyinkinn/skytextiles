@@ -16,15 +16,15 @@ export default function ProductAnimated() {
     const height = window.innerHeight;
     gsap.registerPlugin(ScrollTrigger);
     let tl = gsap.timeline();
-    tl.to(".content", {
+    tl.to(".images", {
       scrollTrigger: {
         trigger: ".images",
-        start: "top 15%",
+        start: "top 25%",
         endTrigger: ".garments",
-        end: "bottom center",
+        end: "top 25%",
         pin: true,
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     })
       .fromTo(
@@ -36,28 +36,56 @@ export default function ProductAnimated() {
           clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
           scrollTrigger: {
             trigger: ".fabrics",
-            start: "top 15%",
+            start: "top center",
             end: `+=100`,
-            pin: true,
             scrub: true,
-            markers: true,
+            // markers: true,
           },
         }
       )
       .fromTo(
-        ".yarnsImage",
+        ".fabricsImage",
+        {
+          clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+        },
         {
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-        },
+          scrollTrigger: {
+            trigger: ".fabrics",
+            start: "top center",
+            end: `+=100`,
+            scrub: true,
+            // markers: true,
+          },
+        }
+      )
+      .to(
+        ".fabricsImage",
+
         {
           clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
           scrollTrigger: {
-            trigger: ".fabrics",
-            start: "top 15%",
+            trigger: ".garments",
+            start: "top center",
             end: `+=100`,
-            pin: true,
             scrub: true,
-            markers: true,
+            // markers: true,
+          },
+        }
+      )
+      .fromTo(
+        ".garmentsImage",
+        {
+          clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+        },
+        {
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          scrollTrigger: {
+            trigger: ".garments",
+            start: "top center",
+            end: `+=100`,
+            scrub: true,
+            // markers: true,
           },
         }
       );
@@ -100,7 +128,12 @@ export default function ProductAnimated() {
           </Typography>
         </Stack>
       </Stack>
-      <Stack width={"35%"} className="images" position={"relative"}>
+      <Stack
+        width={"35%"}
+        height={"700px"}
+        className="images"
+        position={"relative"}
+      >
         <Stack
           height={"300px"}
           width={"500px"}
@@ -110,6 +143,7 @@ export default function ProductAnimated() {
             backgroundImage: `url(${yarns.src})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
           }}
         ></Stack>
         <Stack
@@ -121,9 +155,21 @@ export default function ProductAnimated() {
             backgroundImage: `url(${fabric.src})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
           }}
         ></Stack>
-
+        <Stack
+          height={"300px"}
+          width={"500px"}
+          className="garmentsImage"
+          position={"absolute"}
+          sx={{
+            backgroundImage: `url(${garments.src})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></Stack>
         {/* 
         <Image
           className="yarnsImage"
