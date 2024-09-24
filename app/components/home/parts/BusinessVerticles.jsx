@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import yarnImage from "./assets/Yarn.gif";
 import fabricImage from "./assets/Fabric.gif";
-import garmentImage from "./assets/Garment.gif";
+import GarmentImage from "./assets/Garment.gif";
 import { useRef } from "react";
 import ReactLenis from "@studio-freight/react-lenis";
 
@@ -327,7 +327,7 @@ export default function BusinessVerticles() {
               className="fabricImage"
             />
             <Image
-              src={garmentImage}
+              src={GarmentImage}
               alt=""
               fill
               objectPosition="top"
