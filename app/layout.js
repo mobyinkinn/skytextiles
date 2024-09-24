@@ -1,6 +1,6 @@
 "use client";
 
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, Stack, ThemeProvider } from "@mui/material";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 
@@ -40,7 +40,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
-        <body className={poppins.className}>{children}</body>
+        <body className={poppins.className}>
+          <Stack overflow={"hidden"} position={"relative"}>
+            {children}
+          </Stack>
+        </body>
       </ThemeProvider>
     </html>
   );

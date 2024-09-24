@@ -1,7 +1,22 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import img from "./assets/rnd.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Rnd() {
+  var settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1.1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "8%",
+  };
   return (
     <Stack
       margin={{ md: "0 70px", xs: "0 20px" }}
@@ -35,6 +50,7 @@ export default function Rnd() {
         gap={"40px"}
         justifyContent={"center"}
         marginTop={"50px"}
+        display={{ md: "flex", xs: "none" }}
       >
         <Box
           width={"25%"}
@@ -54,6 +70,61 @@ export default function Rnd() {
           borderRadius={"10px"}
           sx={{ backgroundImage: `url(${img.src})`, backgroundSize: "cover" }}
         ></Box>
+      </Stack>
+      <Stack height={{ smm: "40vh" }} display={{ md: "none", xs: "flex" }}>
+        <Slider {...settings}>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "40vh", xs: "40vh" }}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "40vh", xs: "40vh" }}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "40vh", xs: "40vh" }}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+        </Slider>
       </Stack>
     </Stack>
   );

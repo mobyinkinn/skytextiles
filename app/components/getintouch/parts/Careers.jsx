@@ -1,3 +1,4 @@
+"use client";
 import { Stack, Typography } from "@mui/material";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
@@ -6,7 +7,6 @@ import arrow from "./assets/arrow.png";
 import location from "./assets/location.png";
 import time from "./assets/time.png";
 import Image from "next/image";
-
 
 export default function Careers() {
   const data = [
@@ -178,9 +178,7 @@ export default function Careers() {
               alignItems={"center"}
               display={{ md: "none", smm: "flex" }}
             >
-              <Typography fontSize="18px">
-                Apply Now
-              </Typography>
+              <Typography fontSize="18px">Apply Now</Typography>
               <Image src={arrow} alt="" width={"15"} height={"15"} />
             </Stack>
           </Stack>

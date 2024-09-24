@@ -6,9 +6,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import yarnImage from "./assets/woolnneedle.gif";
-import fabricImage from "./assets/flower.gif";
-import garmentImage from "./assets/garment.gif";
+import yarnImage from "./assets/Yarn.gif";
+import fabricImage from "./assets/Fabric.gif";
+import garmentImage from "./assets/Garment.gif";
 import { useRef } from "react";
 import ReactLenis from "@studio-freight/react-lenis";
 
@@ -29,7 +29,8 @@ export default function BusinessVerticles() {
       scrollTrigger: {
         trigger: ".yarns",
         start: "top 15%",
-        end: "+=300",
+        endTrigger: ".fabricsContainer",
+        end: "top center",
         anticipatePin: 0.1,
         inertia: false,
         pin: true,
@@ -43,7 +44,7 @@ export default function BusinessVerticles() {
         opacity: 0,
         scrollTrigger: {
           trigger: ".fabrics",
-          start: "top 30%%",
+          start: "top center",
           end: "+=50",
           scrub: true,
           // markers: true,
@@ -57,18 +58,18 @@ export default function BusinessVerticles() {
         scrollTrigger: {
           trigger: ".fabrics",
           start: "top 30%",
-          end: "+=150",
+          endTrigger: ".fabricsContainer",
+          end: "top 70%",
           scrub: true,
           // markers: true,
         },
-      });
-
-    tl2
+      })
       .to(".fabricsContainer", {
         scrollTrigger: {
           trigger: ".fabricsContainer",
           start: "center 35%",
-          end: "+=400",
+          endTrigger: ".garmentsContainer",
+          end: "top center",
           anticipatePin: 0.1,
           inertia: false,
           pin: true,
@@ -98,14 +99,13 @@ export default function BusinessVerticles() {
           scrub: true,
           // markers: true,
         },
-      });
-
-    tl3
+      })
       .to(".garmentsContainer", {
         scrollTrigger: {
           trigger: ".garmentsContainer",
           start: "center 35%",
-          end: "+=300",
+          endTrigger: ".garmentsContainer",
+          end: "bottom center",
           anticipatePin: 0.1,
           inertia: false,
           pin: true,
@@ -140,8 +140,9 @@ export default function BusinessVerticles() {
     tl4.to(".imageContainer", {
       scrollTrigger: {
         trigger: ".imageContainer",
-        start: "top 25%",
-        end: "+=1600",
+        start: "top 15%",
+        endTrigger: ".garmentsContainer",
+        end: "bottom center",
         anticipatePin: 0.1,
         inertia: false,
         pin: true,
@@ -151,22 +152,31 @@ export default function BusinessVerticles() {
       },
     });
   });
+
   return (
     <ReactLenis root options={{ lerp: 2, duration: 1.5, smoothWheel: true }}>
-      <Stack margin={"50px 200px"} ref={container}>
+      <Stack
+        margin={{ lg: "50px 150px", md: "50px 100px", smm: "30px", xs: "10px" }}
+        ref={container}
+      >
         <Typography
           color="#D88684"
-          fontSize={"2.5rem"}
+          fontSize={{ md: "3rem", smm: "2rem", xs: "1.5rem" }}
           fontWeight={"bold"}
           textAlign={"center"}
           paddingBottom={"50px"}
         >
           Business Verticles
         </Typography>
-        <Stack direction={"row"} gap={"100px"}>
+        <Stack direction={"row"} height={"100vh"} gap={"100px"}>
           <Stack>
-            <Stack className="yarns">
-              <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
+            <Stack className="yarns" gap={{ md: "20px" }}>
+              <Stack
+                marginBottom={"10px"}
+                direction={"row"}
+                gap={"10px"}
+                alignItems={"center"}
+              >
                 <Stack
                   sx={{
                     border: "1.5px solid black",
@@ -187,24 +197,42 @@ export default function BusinessVerticles() {
                     }}
                   ></Box>
                 </Stack>
-                <Typography fontSize={"5rem"} fontWeight={"bold"}>
+                <Typography
+                  fontSize={{
+                    lg: "4.5rem",
+                    md: "3rem",
+                    smm: "2.5rem",
+                    xs: "2rem",
+                  }}
+                  fontWeight={"bold"}
+                >
                   Yarns
                 </Typography>
               </Stack>
               <Typography
-                width={"25vw"}
-                fontSize={"1.2rem"}
+                width={{ md: "25vw", sm: "70vw", xs: "60vw" }}
+                fontSize={{
+                  lg: "1.2rem",
+                  md: "1rem",
+                  smm: "0.9rem",
+                  xs: "0.7rem",
+                }}
                 sx={{ opacity: 0, display: "none" }}
                 className="yarnsText"
               >
-                The largest producer and a leading exporter of value added
-                synthetic and blended dyed spun yarn in India, we are also a
-                prominent manufacturer of cotton blended dyed and mélange yarn…
+                100% Cotton Combed Compact with P.P. Cleared Yarns We product
+                richest quality of compact yarns using the advanced techniques
+                and spinning machines.
               </Typography>
             </Stack>
 
             <Stack className="fabrics">
-              <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
+              <Stack
+                marginBottom={"10px"}
+                direction={"row"}
+                gap={"10px"}
+                alignItems={"center"}
+              >
                 <Stack
                   sx={{
                     border: "1.5px solid black",
@@ -225,7 +253,15 @@ export default function BusinessVerticles() {
                     }}
                   ></Box>
                 </Stack>
-                <Typography fontSize={"5rem"} fontWeight={"bold"}>
+                <Typography
+                  fontSize={{
+                    lg: "4.5rem",
+                    md: "3rem",
+                    smm: "2.5rem",
+                    xs: "2rem",
+                  }}
+                  fontWeight={"bold"}
+                >
                   Fabrics
                 </Typography>
               </Stack>
@@ -252,14 +288,23 @@ export default function BusinessVerticles() {
                     }}
                   ></Box>
                 </Stack>
-                <Typography fontSize={"5rem"} fontWeight={"bold"}>
+                <Typography
+                  fontSize={{
+                    lg: "4.5rem",
+                    md: "3rem",
+                    smm: "2.5rem",
+                    xs: "2rem",
+                  }}
+                  fontWeight={"bold"}
+                >
                   Garments
                 </Typography>
               </Stack>
             </Stack>
           </Stack>
           <Stack
-            width={"30vw"}
+            width={{ lg: "40vw", md: "40vw" }}
+            display={{ xs: "none", md: "flex" }}
             height={"60vh"}
             position={"relative"}
             className="imageContainer"
@@ -268,6 +313,7 @@ export default function BusinessVerticles() {
               src={yarnImage}
               alt=""
               fill
+              objectPosition="top"
               objectFit="contain"
               className="yarnImage"
             />
@@ -275,6 +321,7 @@ export default function BusinessVerticles() {
               src={fabricImage}
               alt=""
               fill
+              objectPosition="top"
               objectFit="contain"
               style={{ opacity: 0 }}
               className="fabricImage"
@@ -283,6 +330,7 @@ export default function BusinessVerticles() {
               src={garmentImage}
               alt=""
               fill
+              objectPosition="top"
               objectFit="contain"
               style={{ opacity: 0 }}
               className="garmentImage"
@@ -292,7 +340,7 @@ export default function BusinessVerticles() {
 
         <Stack
           className="fabricsContainer"
-          height={"100vh"}
+          height={{ md: "100vh", xs: "120vh" }}
           justifyContent={"center"}
         >
           <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
@@ -316,24 +364,30 @@ export default function BusinessVerticles() {
                 }}
               ></Box>
             </Stack>
-            <Typography fontSize={"5rem"} fontWeight={"bold"}>
+            <Typography
+              fontSize={{
+                lg: "4.5rem",
+                md: "3rem",
+                smm: "2.5rem",
+                xs: "2rem",
+              }}
+              fontWeight={"bold"}
+            >
               Fabrics
             </Typography>
           </Stack>
           <Typography
-            width={"25vw"}
-            fontSize={"1.2rem"}
+            width={{ md: "25vw", xs: "70vw", xs: "60vw" }}
+            fontSize={{ lg: "1.2rem", md: "1rem", smm: "0.9rem", xs: "0.7rem" }}
             sx={{ opacity: 0 }}
             className="fabricsText"
           >
-            The largest producer and a leading exporter of value added synthetic
-            and blended dyed spun yarn in India, we are also a prominent
-            manufacturer of cotton blended dyed and mélange yarn…
+            Griege and Finished Knitted Fabrics.
           </Typography>
         </Stack>
         <Stack
           className="garmentsContainer"
-          height={"100vh"}
+          height={{ md: "100vh", xs: "120vh" }}
           justifyContent={"center"}
         >
           <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
@@ -357,19 +411,26 @@ export default function BusinessVerticles() {
                 }}
               ></Box>
             </Stack>
-            <Typography fontSize={"5rem"} fontWeight={"bold"}>
+            <Typography
+              fontSize={{
+                lg: "4.5rem",
+                md: "3rem",
+                smm: "2.5rem",
+                xs: "2rem",
+              }}
+              fontWeight={"bold"}
+            >
               Garments
             </Typography>
           </Stack>
           <Typography
-            width={"25vw"}
-            fontSize={"1.2rem"}
+            width={{ md: "25vw", xs: "70vw", xs: "60vw" }}
+            fontSize={{ lg: "1.2rem", md: "1rem", smm: "0.9rem", xs: "0.7rem" }}
             sx={{ opacity: 0 }}
             className="garmentsText"
           >
-            The largest producer and a leading exporter of value added synthetic
-            and blended dyed spun yarn in India, we are also a prominent
-            manufacturer of cotton blended dyed and mélange yarn…
+            Fashion and Trendy Inner wear, Casual wear, Lounge wear, Sleep wear,
+            Thermals, Athleisure, Outer wear, Fashion styles
           </Typography>
         </Stack>
       </Stack>

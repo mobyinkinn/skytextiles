@@ -1,4 +1,6 @@
-import { Stack, Typography } from "@mui/material";
+"use client";
+
+import { Box, Stack, Typography } from "@mui/material";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
 import Image from "next/image";
@@ -7,6 +9,21 @@ import banner from "./assets/verticleBanner.png";
 import snow from "./assets/snow.png";
 import lady from "./assets/lady.png";
 import couple from "./assets/couple.png";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+var settings = {
+  arrows: false,
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1.1,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: "8%",
+};
 
 export default function VerticleSetup() {
   return (
@@ -144,6 +161,7 @@ export default function VerticleSetup() {
           justifyContent={"space-between"}
           direction={"row"}
           margin={{ md: "50px 70px", xs: "30px" }}
+          display={{ md: "flex", xs: "none" }}
         >
           <Stack
             width={"23%"}
@@ -186,7 +204,63 @@ export default function VerticleSetup() {
             }}
           ></Stack>
         </Stack>
+        <Stack height={{ smm: "40vh" }} display={{ md: "none", xs: "flex" }}>
+          <Slider {...settings}>
+            <Box padding={"10px"}>
+              <Box
+                height={{ smm: "40vh", xs: "40vh" }}
+                sx={{
+                  backgroundImage: `url(${couple.src})`,
+                  transition: "filter 0.5s ease",
+                  backgroundSize: "cover",
+                  borderRadius: "20px",
+                  backgroundPosition: "center center",
+                  filter: "grayscale(100%)",
+                  cursor: "pointer",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              ></Box>
+            </Box>
+            <Box padding={"10px"}>
+              <Box
+                height={{ smm: "40vh", xs: "40vh" }}
+                sx={{
+                  backgroundImage: `url(${couple.src})`,
+                  transition: "filter 0.5s ease",
+                  backgroundSize: "cover",
+                  borderRadius: "20px",
+                  backgroundPosition: "center center",
+                  filter: "grayscale(100%)",
+                  cursor: "pointer",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              ></Box>
+            </Box>
+            <Box padding={"10px"}>
+              <Box
+                height={{ smm: "40vh", xs: "40vh" }}
+                sx={{
+                  backgroundImage: `url(${couple.src})`,
+                  transition: "filter 0.5s ease",
+                  backgroundSize: "cover",
+                  borderRadius: "20px",
+                  backgroundPosition: "center center",
+                  filter: "grayscale(100%)",
+                  cursor: "pointer",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              ></Box>
+            </Box>
+          </Slider>
+        </Stack>
       </Stack>
+
       <Footer />
     </Stack>
   );

@@ -77,7 +77,7 @@ export default function Enduro() {
   return (
     <Stack margin={"0 50px"} gap={"10px"}>
       <Typography
-        fontSize={"2.5rem"}
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
         textAlign={"center"}
         fontWeight={"bold"}
         padding={"20px 0"}
@@ -85,6 +85,7 @@ export default function Enduro() {
         Enduro Pulse
       </Typography>
       <Stack
+        display={{ md: "flex", xs: "none" }}
         width={"100%"}
         alignItems={"end"}
         height={"100vh"}
@@ -121,6 +122,7 @@ export default function Enduro() {
         </Box>
       </Stack>
       <Stack
+        display={{ md: "flex", xs: "none" }}
         width={"100%"}
         alignItems={"start"}
         height={"100vh"}
@@ -155,6 +157,48 @@ export default function Enduro() {
         >
           {/* <Image src={enduro2} alt="" fill objectFit="cover" /> */}
         </Box>
+      </Stack>
+      <Stack width={"100%"} gap={"10px"} display={{ md: "none" }}>
+        <Box
+          width={"100%"}
+          height={"40vh"}
+          sx={{
+            backgroundImage: `url(${enduro1.src})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+          }}
+        ></Box>
+        <Box
+          width={"100%"}
+          height={"40vh"}
+          sx={{
+            backgroundImage: `url(${enduro2.src})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+          }}
+        ></Box>
+        <Box
+          width={"100%"}
+          height={"40vh"}
+          sx={{
+            backgroundImage: `url(${enduro3.src})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+          }}
+        ></Box>
+        <Box
+          width={"100%"}
+          height={"40vh"}
+          sx={{
+            backgroundImage: `url(${enduro4.src})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+          }}
+        ></Box>
       </Stack>
     </Stack>
   );

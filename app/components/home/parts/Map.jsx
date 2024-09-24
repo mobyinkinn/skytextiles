@@ -4,23 +4,31 @@ import Image from "next/image";
 
 export default function () {
   return (
-    <Stack margin={"200px 0"}>
+    <Stack margin={{ md: "300px 0 100px 0", xs: "30px 0" }}>
       <Typography
-        sx={{ fontSize: "2.5rem", textAlign: "center", fontWeight: "bold" }}
+        fontSize={{ md: "3rem", smm: "2rem", xs: "1.5rem" }}
+        sx={{
+          textAlign: "center",
+          fontWeight: "bold",
+        }}
       >
         260+ Projects Delivered
       </Typography>
       <Typography
+        fontSize={{ md: "1.5rem", xs: "0.9rem" }}
         sx={{
           color: "#D88684",
-          fontSize: "1.5rem",
           textAlign: "center",
           fontWeight: "bold",
         }}
       >
         and counting more...
       </Typography>
-      <Box position={"relative"} width={"100%"} height={"80vh"}>
+      <Box
+        position={"relative"}
+        width={"100%"}
+        height={{ md: "80vh", xs: "50vh" }}
+      >
         <Image src={map} alt="" fill objectFit="contain" />
       </Box>
     </Stack>

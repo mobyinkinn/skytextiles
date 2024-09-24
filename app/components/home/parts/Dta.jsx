@@ -4,20 +4,35 @@ import Image from "next/image";
 
 export default function Dta() {
   return (
-    <Stack direction={"row"} alignItems={"center"} margin={"50px"} gap={"50px"}>
-      <Box width={"50vw"} height={"60vh"} position={"relative"}>
+    <Stack
+      direction={"row"}
+      alignItems={"center"}
+      margin={{ md: "70px", xs: "30px" }}
+      gap={"50px"}
+    >
+      <Box
+        width={"50vw"}
+        height={"60vh"}
+        display={{ md: "block", xs: "none" }}
+        position={"relative"}
+      >
         <Image src={wool} alt="" fill objectFit="contain" />
       </Box>
       <Stack>
-        <Typography fontWeight={"bold"} fontSize={"4.5rem"} lineHeight={"1.2"}>
-          Design
+        <Typography
+          fontWeight={"bold"}
+          fontSize={{ lg: "4.5rem", smm: "3rem", xs: "2rem" }}
+          lineHeight={"1.2"}
+        >
+          Quality
           <br />
-          Transform
+          Service
           <br />
-          Accelerate
+          Transparency
         </Typography>
-        <Typography fontSize={"2rem"} marginTop={"10px"}>
-          We Revolutionize User Experience <br /> Using Behavioural Science.
+        <Typography fontSize={{ md: "2rem", xs: "1.2rem" }} marginTop={"10px"}>
+          Experience exceptional quality, reliable service, <br /> and full
+          transparency in every step we take for you.
         </Typography>
       </Stack>
     </Stack>

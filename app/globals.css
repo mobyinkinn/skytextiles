@@ -6,6 +6,10 @@
 
 /* black nav button */
 
+body {
+  overflow: none;
+}
+
 .fancy-button-text-container {
   position: relative;
   display: flex;

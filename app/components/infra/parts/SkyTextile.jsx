@@ -57,6 +57,16 @@ export default function SkyTextiles() {
     slidesToShow: 1.5,
     slidesToScroll: 1,
   };
+  var settingsMobile = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    centerPadding: "8%",
+    centerMode: true,
+    speed: 500,
+    slidesToShow: 1.1,
+    slidesToScroll: 1,
+  };
   return (
     <Stack>
       <Navbar />
@@ -72,31 +82,36 @@ export default function SkyTextiles() {
           backgroundPosition: { md: "center right", xs: "center bottom" },
         }}
         padding={{ md: "0 70px", xs: "50px 30px" }}
-        justifyContent={"center"}
+        justifyContent={{ md: "center", xs: "start" }}
       >
         <Typography
-          marginTop={{ xs: "20vh", md: "0px" }}
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
           fontWeight={"bold"}
+          textAlign={{ md: "left", xs: "center" }}
         >
           It Is A Long
         </Typography>
         <Typography
           fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
+          textAlign={{ md: "left", xs: "center" }}
           fontWeight={"bold"}
         >
           Established Fact.
         </Typography>
-        <Typography width={"40%"} fontSize={{ md: "1rem", xs: "0.7rem" }}>
+        <Typography
+          width={{ md: "40%" }}
+          textAlign={{ md: "left", xs: "center" }}
+          fontSize={{ md: "1rem", xs: "0.7rem" }}
+        >
           There Are Many Variations of Passages of Lorem Ipsum Available, But
           The Majority Have Suffered Alteration In Some Form, By Injected
           Humour, or Randomised Words Which Don't Look Even Slightly Believable.
         </Typography>
       </Stack>
-      <Stack margin={{ md: "70px", xs: "30px" }}>
+      <Stack margin={{ md: "70px", xs: "20px" }}>
         <Stack
           direction={{ md: "row" }}
-          paddingRight={"10vw"}
+          paddingRight={{ md: "10vw" }}
           width={"100%"}
           justifyContent={"space-between"}
           alignItems={{ md: "center", xs: "start" }}
@@ -154,7 +169,7 @@ export default function SkyTextiles() {
             </Stack>
           </Stack>
         </Stack>
-        <Box>
+        <Box display={{ md: "block", xs: "none" }}>
           <Slider ref={sliderRef} {...settings}>
             {enterpriseData.map((el, i) => {
               return (
@@ -177,6 +192,34 @@ export default function SkyTextiles() {
                     {el.head}
                   </Typography>
                   <Typography>{el.data}</Typography>
+                </Stack>
+              );
+            })}
+          </Slider>
+        </Box>
+        <Box display={{ md: "none" }}>
+          <Slider ref={sliderRef} {...settingsMobile}>
+            {enterpriseData.map((el, i) => {
+              return (
+                <Stack padding={"10px 10px 0 0"}>
+                  <Box
+                    marginBottom={"20px"}
+                    height={"30vh"}
+                    width={"100%"}
+                    sx={{
+                      backgroundImage: `url(${el.image.src})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center center",
+                    }}
+                  ></Box>
+                  <Typography
+                    fontSize={"0.9rem"}
+                    fontWeight={"bold"}
+                    marginBottom={"5px"}
+                  >
+                    {el.head}
+                  </Typography>
+                  <Typography fontSize={"0.8rem"}>{el.data}</Typography>
                 </Stack>
               );
             })}
@@ -295,11 +338,11 @@ export default function SkyTextiles() {
 
         <Stack
           marginTop={"50px"}
-          direction={"row"}
-          height={"70vh"}
+          direction={{ md: "row" }}
+          height={{ md: "70vh" }}
           justifyContent={"space-between"}
         >
-          <Stack width={"30%"}>
+          <Stack width={{ md: "30%", xs: "70%" }} marginBottom={"30px"}>
             <Typography>Step-1</Typography>
             <Typography
               fontSize={"1.4rem"}
@@ -318,7 +361,12 @@ export default function SkyTextiles() {
               }}
             ></Box>
           </Stack>
-          <Stack width={"30%"}>
+          <Stack
+            width={{ md: "30%", xs: "70%" }}
+            marginBottom={"30px"}
+            justifyContent={"center"}
+            alignSelf={{ xs: "end", md: "center" }}
+          >
             <Typography>Step-2</Typography>
             <Typography
               fontSize={"1.4rem"}
@@ -337,7 +385,11 @@ export default function SkyTextiles() {
               }}
             ></Box>
           </Stack>
-          <Stack height={"70vh"} width={"30%"}>
+          <Stack
+            justifyContent={"end"}
+            width={{ md: "30%", xs: "70%" }}
+            marginBottom={"30px"}
+          >
             <Typography>Step-3</Typography>
             <Typography
               fontSize={"1.4rem"}

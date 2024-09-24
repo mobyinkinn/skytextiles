@@ -39,81 +39,97 @@ export default function Certifications() {
         </Typography>
       </Stack>
       <Stack
-        justifyContent={"space-between"}
-        margin={"0px 70px 100px 70px"}
+        justifyContent={{ md: "space-between", xs: "center" }}
+        margin={{ md: "0px 70px 10px 70px", xs: "10px 30px" }}
         direction={"row"}
+        gap={"20px"}
         flexWrap={"wrap"}
       >
         <Box
-          width={"23%"}
-          height={"50vh"}
-          marginBottom={"50px"}
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
           sx={{
             backgroundImage: `url(${cert.src})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></Box>
+        <Box
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
+          sx={{
+            backgroundImage: `url(${cert.src})`,
+            backgroundPosition: "center",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
         ></Box>
         <Box
-          width={"23%"}
-          height={"50vh"}
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
           sx={{
             backgroundImage: `url(${cert.src})`,
+            backgroundPosition: "center",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
         ></Box>
         <Box
-          width={"23%"}
-          height={"50vh"}
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
           sx={{
             backgroundImage: `url(${cert.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></Box>
+        <Box
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
+          sx={{
+            backgroundImage: `url(${cert.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></Box>
+        <Box
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
+          sx={{
+            backgroundImage: `url(${cert.src})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></Box>
+        <Box
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
+          sx={{
+            backgroundImage: `url(${cert.src})`,
+            backgroundPosition: "center",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
           }}
         ></Box>
         <Box
-          width={"23%"}
-          height={"50vh"}
+          width={{ md: "23%", xs: "40%" }}
+          height={{ md: "50vh", xs: "30vh" }}
+          marginBottom={{ md: "50px" }}
           sx={{
             backgroundImage: `url(${cert.src})`,
             backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></Box>
-        <Box
-          width={"23%"}
-          height={"50vh"}
-          sx={{
-            backgroundImage: `url(${cert.src})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></Box>
-        <Box
-          width={"23%"}
-          height={"50vh"}
-          sx={{
-            backgroundImage: `url(${cert.src})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></Box>
-        <Box
-          width={"23%"}
-          height={"50vh"}
-          sx={{
-            backgroundImage: `url(${cert.src})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></Box>
-        <Box
-          width={"23%"}
-          height={"50vh"}
-          sx={{
-            backgroundImage: `url(${cert.src})`,
-            backgroundSize: "contain",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
         ></Box>

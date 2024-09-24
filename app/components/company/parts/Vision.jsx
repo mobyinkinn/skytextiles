@@ -14,20 +14,20 @@ const data = [
   {
     id: 0,
     icon: icon1,
-    head: "We Manufacture",
-    body: "Innovation at Sutlej is driven by the needs of the customers who increasingly demand differentiated products to respond to new.",
+    head: "Knitting",
+    body: " The process of creating fabric by interlocking yarn loops to form flexible, stretchable textiles.",
   },
   {
     id: 1,
     icon: icon2,
-    head: "We Design Fabric",
-    body: "Innovation at Sutlej is driven by the needs of the customers who increasingly demand differentiated products to respond to new",
+    head: "Dyeing",
+    body: "Applying color to fabric through various methods to achieve vibrant and consistent shades.",
   },
   {
     id: 2,
     icon: icon3,
-    head: "We Engineer",
-    body: "Innovation at Sutlej is driven by the needs of the customers who increasingly demand differentiated products to respond to new.",
+    head: "Finishing",
+    body: " Enhancing fabric properties like texture, strength, and appearance through treatments and processes after knitting and dyeing.",
   },
 ];
 
@@ -141,12 +141,12 @@ export default function Vision() {
               Vision
             </Typography>
             <Typography
-              fontSize={{ lg: "3.5rem", xs: "2rem" }}
+              fontSize={{ lg: "3rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="vision"
             >
-              To be the world's best and most trusted human experience design
-              company
+              Lead the industry with innovative, sustainable textile solutions
+              for eco-friendly fashion.
             </Typography>
           </Box>
           <Box height={{ md: "90vh" }}>
@@ -160,11 +160,12 @@ export default function Vision() {
               Mission
             </Typography>
             <Typography
-              fontSize={{ lg: "3.5rem", xs: "2rem" }}
+              fontSize={{ lg: "3rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="mission"
             >
-              To enhance and elevate human interaction
+              Produce high-quality, sustainable textiles through innovation and
+              ethical practices.
             </Typography>
           </Box>
           <Box height={{ md: "90vh" }}>
@@ -178,11 +179,12 @@ export default function Vision() {
               Values
             </Typography>
             <Typography
-              fontSize={{ lg: "3.5rem", xs: "2rem" }}
+              fontSize={{ lg: "3rem", xs: "2rem" }}
               fontWeight={"bold"}
               className="values"
             >
-              To pursue excellence through dedicated teamwork
+              Quality, Sustainability, Innovation, Integrity, Customer Focus,
+              Collaboration, Responsibility
             </Typography>
           </Box>
         </Stack>

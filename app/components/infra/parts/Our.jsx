@@ -1,7 +1,22 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import img from "./assets/our.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Our() {
+  var settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1.5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "20%",
+  };
   return (
     <Stack margin={{ md: "100px 70px", xs: "50px 30px" }} gap={"10px"}>
       <Typography
@@ -11,22 +26,21 @@ export default function Our() {
         Our <span style={{ color: "#FB5457" }}>Infrastructure</span>
       </Typography>
       <Typography>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        We are India's only composite manufacturing plant having
+        state-of-the-art manufacturing facilities right from Fiber to Made-ups.
+        With an area of 82,100 sq.mtrs. We are equipped with highly advanced and
+        modern machineries like Knitting, Singeing, Inspection, Processing,
+        Cutting, Embroidery, Stitching & Packing facilities that helps us in
+        delivering an impeccable range.
       </Typography>
       <Typography>
-        Founded on October 2020, under the Companies Act of 2013 (CIN:
-        U17299GJ2020PTC116984), SKY Textiles is headquartered in Gujarat B-105,
-        Westgate Tower Unit 2,Nr. YMCA Club, S.G. HIGHWAY ,Makarba , AHMEDABAD-
-        380015. Our facility is equipped with the latest technology, including
-        27,360 spindles for producing high-quality cotton threads in a range of
-        counts.
+        Today SKY textiles has Unit at Lathidad manufacturing a wide range of
+        kintted fabrics for Indian and International markets.
       </Typography>
       <Stack
         direction={"row"}
         height={"60vh"}
+        display={{ md: "flex", xs: "none" }}
         sx={{ justifyContent: "space-between", margin: "40px 0" }}
       >
         <Box
@@ -89,6 +103,78 @@ export default function Our() {
             },
           }}
         ></Box>
+      </Stack>
+      <Stack height={{ smm: "60vh" }} display={{ md: "none", xs: "flex" }}>
+        <Slider {...settings}>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "60vh", xs: "30vh" }}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "60vh", xs: "30vh" }}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "60vh", xs: "30vh" }}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+          <Box padding={"10px"}>
+            <Box
+              height={{ smm: "60vh", xs: "30vh" }}
+              sx={{
+                backgroundImage: `url(${img.src})`,
+                transition: "filter 0.5s ease",
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                backgroundPosition: "center center",
+                filter: "grayscale(100%)",
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "grayscale(0%)",
+                },
+              }}
+            ></Box>
+          </Box>
+        </Slider>
       </Stack>
     </Stack>
   );

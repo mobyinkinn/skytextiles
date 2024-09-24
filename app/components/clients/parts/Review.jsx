@@ -11,19 +11,22 @@ import stars from "./assets/stars.png";
 import quotes from "./assets/quotes.png";
 import Image from "next/image";
 
+const reviewData = [1, 2, 3, 4, 5];
+
 export default function Reviews() {
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
     <Stack margin={"100px 0 0 0"}>
       <Typography
+        fontSize={{ lg: "3rem", smm: "2rem", xs: "1.5rem" }}
         sx={{
-          fontSize: "2.5rem",
           fontWeight: "bold",
           textAlign: "center",
           margin: "20px 0",
@@ -32,62 +35,60 @@ export default function Reviews() {
         What clients say
       </Typography>
       <Box
-        width={"60vw"}
+        width={{ md: "60vw", xs: "100%" }}
         margin={"auto"}
-        padding={"50px"}
+        padding={{ md: "50px", xs: "10px 10px 50px 10px" }}
         backgroundColor={"#F9F9F9"}
         borderRadius={"10px"}
       >
         <Slider {...settings}>
-          <Stack padding={"0 10px 20px 10px"} direction={"row"} width={"100%"}>
-            <Stack
-              textAlign={"center"}
-              width={"30%"}
-              display={"inline-block"}
-              marginRight={"10%"}
-            >
-              <Image
-                src={hannah}
-                width={100}
-                height={100}
-                alt=""
-                style={{ margin: "auto" }}
-              />
-              <Typography fontSize={"1.2rem"}>Hannah Schimet</Typography>
-              <Typography fontSize={"0.9rem"}> CEO - Marvish</Typography>
-            </Stack>
-            <Stack position={"relative"} width={"60%"} display={"inline-block"}>
-              <Box position={"absolute"} sx={{ left: "-40px" }}>
-                <Image src={quotes} alt="" width={30} height={30} />
-              </Box>
-              <Image src={stars} alt="" width={100} height={18} />
-              <Typography margin={"10px 0"}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
-                nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed
-                magna eget nibh in turpis. Consequat duis diam lacus arcu.
-                Suspendisse sed magna eget nibh in turpis. Consequat duis diam
-                lacus arcu.
-              </Typography>
-              <Typography fontSize={"0.9rem"}>May 8, 2020</Typography>
-            </Stack>
-          </Stack>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
+          {reviewData.map((el, i) => (
+            <ReviewsCard />
+          ))}
         </Slider>
       </Box>
+    </Stack>
+  );
+}
+
+function ReviewsCard() {
+  return (
+    <Stack
+      padding={{ md: "0 10px 20px 10px", xs: "10px" }}
+      direction={{ md: "row", xs: "column" }}
+      gap={"40px"}
+      width={"100%"}
+      alignItems={"center"}
+    >
+      <Stack textAlign={"center"} width={{ md: "30%" }} alignItems={"center"}>
+        <Image src={hannah} width={100} height={100} alt="" />
+        <Typography fontSize={"1.2rem"} marginTop={"10px"}>
+          Hannah Schimet
+        </Typography>
+        <Typography fontSize={"0.9rem"}> CEO - Marvish</Typography>
+      </Stack>
+      <Stack
+        position={"relative"}
+        width={{ md: "60%", xs: "85%" }}
+        marginLeft={{ xs: "10%", md: "0" }}
+      >
+        <Box position={"absolute"} sx={{ left: "-40px" }}>
+          <Image src={quotes} alt="" width={30} height={30} />
+        </Box>
+        <Image src={stars} alt="" width={100} height={18} />
+        <Typography
+          margin={"10px 0"}
+          fontSize={{ md: "1rem", smm: "0.8rem", xs: "0.7rem" }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh
+          mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget
+          nibh in turpis. Consequat duis diam lacus arcu. Suspendisse sed magna
+          eget nibh in turpis. Consequat duis diam lacus arcu.
+        </Typography>
+        <Typography fontSize={{ md: "0.9rem", xs: "0.6rem" }}>
+          May 8, 2020
+        </Typography>
+      </Stack>
     </Stack>
   );
 }

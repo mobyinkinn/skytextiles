@@ -4,20 +4,29 @@ import React, { useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
-import img5 from "@/app/components/home/parts/assets/team.png";
-import img4 from "@/app/components/home/parts/assets/team2.png";
-import img3 from "@/app/components/home/parts/assets/team3.png";
+import img1 from "@/app/components/home/parts/assets/coverImages/image1.jpeg";
+import img2 from "@/app/components/home/parts/assets/coverImages/image2.jpg";
+import img3 from "@/app/components/home/parts/assets/coverImages/image3.jpg";
+import img4 from "@/app/components/home/parts/assets/coverImages/image4.jpg";
+import img5 from "@/app/components/home/parts/assets/coverImages/image5.jpg";
+import img6 from "@/app/components/home/parts/assets/coverImages/image6.jpg";
+import img7 from "@/app/components/home/parts/assets/coverImages/image7.jpg";
+import img8 from "@/app/components/home/parts/assets/coverImages/image8.jpg";
+import img9 from "@/app/components/home/parts/assets/coverImages/image9.jpg";
+import img10 from "@/app/components/home/parts/assets/coverImages/image10.jpg";
+import img11 from "@/app/components/home/parts/assets/coverImages/image11.jpg";
 
-import image1 from "@/app/components/home/parts/assets/hoverImages/Image1.png";
-import image2 from "@/app/components/home/parts/assets/hoverImages/Image2.png";
-import image3 from "@/app/components/home/parts/assets/hoverImages/Image3.png";
-import image5 from "@/app/components/home/parts/assets/hoverImages/Image5.png";
-import image6 from "@/app/components/home/parts/assets/hoverImages/Image6.png";
-import image7 from "@/app/components/home/parts/assets/hoverImages/Image7.png";
-import image8 from "@/app/components/home/parts/assets/hoverImages/Image8.png";
-import image9 from "@/app/components/home/parts/assets/hoverImages/Image9.png";
-import image11 from "@/app/components/home/parts/assets/hoverImages/Image11.png";
-import image10 from "@/app/components/home/parts/assets/hoverImages/Image10.png";
+import image1 from "@/app/components/home/parts/assets/hoverImages/Image1.jpg";
+import image2 from "@/app/components/home/parts/assets/hoverImages/Image2.jpg";
+import image3 from "@/app/components/home/parts/assets/hoverImages/Image3.jpg";
+import image5 from "@/app/components/home/parts/assets/hoverImages/Image5.jpg";
+import image6 from "@/app/components/home/parts/assets/hoverImages/Image6.jpg";
+import image7 from "@/app/components/home/parts/assets/hoverImages/Image7.jpg";
+import image8 from "@/app/components/home/parts/assets/hoverImages/Image8.jpg";
+import image9 from "@/app/components/home/parts/assets/hoverImages/Image9.jpg";
+import image11 from "@/app/components/home/parts/assets/hoverImages/Image11.jpg";
+import image10 from "@/app/components/home/parts/assets/hoverImages/Image10.jpg";
+import image4 from "@/app/components/home/parts/assets/hoverImages/Image4.jpg";
 
 const coverAnimation = {
   position: "relative",
@@ -41,45 +50,53 @@ const cover = {
 };
 
 const coverImages = [
-  { id: 0, img: img5 },
-  { id: 1, img: img4 },
+  { id: 0, img: img1 },
+  { id: 1, img: img2 },
   { id: 2, img: img3 },
+  { id: 3, img: img4 },
+  { id: 4, img: img5 },
+  { id: 5, img: img6 },
+  { id: 6, img: img7 },
+  { id: 7, img: img8 },
+  { id: 8, img: img9 },
+  { id: 9, img: img10 },
+  { id: 10, img: img11 },
 ];
 
 const hoverImages = [
   image1,
   image2,
   image3,
+  image4,
   image5,
   image6,
   image7,
   image8,
   image9,
-  image1,
-  image9,
   image10,
   image11,
-  image7,
-  image5,
+  image1,
+  image2,
   image3,
+  image4,
 ];
 
 const images = [
   { id: 0, img: image1 },
   { id: 1, img: image2 },
   { id: 2, img: image3 },
-  { id: 3, img: image5 },
-  { id: 4, img: image6 },
-  { id: 5, img: image7 },
-  { id: 6, img: image8 },
-  { id: 7, img: image9 },
-  { id: 8, img: image1 },
-  { id: 9, img: image9 },
-  { id: 10, img: image10 },
-  { id: 11, img: image11 },
-  { id: 11, img: image7 },
-  { id: 11, img: image5 },
-  { id: 11, img: image3 },
+  { id: 3, img: image4 },
+  { id: 4, img: image5 },
+  { id: 5, img: image6 },
+  { id: 6, img: image7 },
+  { id: 7, img: image8 },
+  { id: 8, img: image9 },
+  { id: 9, img: image10 },
+  { id: 10, img: image11 },
+  { id: 11, img: image1 },
+  { id: 12, img: image2 },
+  { id: 13, img: image3 },
+  { id: 14, img: image4 },
 ];
 
 const Hover = () => {
@@ -91,7 +108,7 @@ const Hover = () => {
     let e = event.target.alt;
     console.log(e);
     if (e) {
-      let i = e % 3;
+      let i = (e - 1) % 11;
       setCurrentImage(i);
       setIsHovered(true);
     } else {
@@ -100,12 +117,12 @@ const Hover = () => {
   }
 
   return (
-    <Stack>
+    <Stack margin={"50px 0 0 0"}>
       <Typography
         marginBottom={"20px"}
-        fontSize={"2.5rem"}
         fontWeight={"bold"}
         textAlign={"center"}
+        fontSize={{ md: "3rem", smm: "2rem", xs: "1.2rem" }}
       >
         We work with
       </Typography>
@@ -127,9 +144,12 @@ const Hover = () => {
               onMouseEnter={(e) => setHover(e)}
               onMouseLeave={() => setIsHovered(false)}
               sx={{
-                height: "150px",
+                height: { md: "150px", smm: "100px", xs: "50px" },
                 position: "relative",
                 overflow: "hidden",
+                border: "2px solid #2d2d2d",
+                // borderRadius: "10px",
+                margin: "5px 0",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -185,6 +205,7 @@ const Hover = () => {
           alt=""
           fill
           objectFit={"cover"}
+          objectPosition="top"
           // style={isHovered ? coverStyleHover : coverStyle}
           className="cover-image"
           style={{

@@ -78,7 +78,7 @@ export default function Caraosal() {
               <Stack
                 key={el.id}
                 width={"100%"}
-                height={{ md: "fit-content", xs: "50vh" }}
+                height={{ md: "fit-content", xs: "fit-content" }}
                 sx={{
                   backgroundImage: `url(${el.img.src})`,
                   backgroundSize: { lg: "contain", xs: "cover" },
@@ -87,7 +87,7 @@ export default function Caraosal() {
                 }}
               >
                 <Stack
-                  width={{ md: "40%", xs: "80%" }}
+                  width={{ lg: "40%", md: "50%", xs: "80%" }}
                   backgroundColor={"#FB5457"}
                   padding={"30px"}
                   color={"white"}
@@ -96,14 +96,21 @@ export default function Caraosal() {
                   marginBottom={{ md: "10px", xs: "10px" }}
                   marginLeft={"0"}
                 >
-                  <Typography fontSize={"2rem"}>{el.head}</Typography>
-                  <Typography fontSize={"1.3rem"}>{el.data}</Typography>
+                  <Typography
+                    fontSize={{ lg: "2rem", md: "1.5rem", xs: "1rem" }}
+                  >
+                    {el.head}
+                  </Typography>
+                  <Typography
+                    fontSize={{ lg: "1.2rem", md: "1rem", xs: "0.8rem" }}
+                  >
+                    {el.data}
+                  </Typography>
                 </Stack>
                 <Stack
-                  width={"40%"}
-                  margin={{ md: "0", xs: "0 auto" }}
-                  justifyContent={"center"}
-                  gap={"40px"}
+                  width={{ lg: "40%", md: "50%", xs: "80%" }}
+                  margin={{ md: "0 100px 0 100px", xs: "0 auto" }}
+                  justifyContent={"space-evenly"}
                   direction={"row"}
                 >
                   {processData.map((el, i) => {
@@ -111,14 +118,14 @@ export default function Caraosal() {
                       <Stack
                         onClick={() => sliderRef.current.slickGoTo(i)}
                         marginBottom={"100px"}
-                        backgroundColor={"white"}
+                        backgroundColor={"#FB5457"}
                         justifyContent={"center"}
                         alignItems={"center"}
                         width={"35px"}
                         height={"35px"}
-                        fontSize={currentSlide == i ? "1.5rem" : "1.2rem"}
+                        fontSize={currentSlide == i ? "1.4rem" : "1.2rem"}
                         borderRadius={"50%"}
-                        color={currentSlide == i ? "black" : "#858080"}
+                        color={currentSlide == i ? "white" : "#2d2d2d"}
                         sx={{ cursor: "pointer" }}
                       >
                         {i + 1}

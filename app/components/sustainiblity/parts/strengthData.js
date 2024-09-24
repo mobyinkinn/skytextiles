@@ -1,9 +1,9 @@
-import icon1 from "./assets/outlineicon1.png";
-import icon2 from "./assets/outlineicon2.png";
-import icon3 from "./assets/outlineicon3.png";
-import icon4 from "./assets/outlineicon4.png";
-import icon5 from "./assets/outlineicon5.png";
-import icon6 from "./assets/outlineicon6.png";
+import icon1 from "./assets/gif/gif1.gif";
+import icon2 from "./assets/gif/gif2.gif";
+import icon3 from "./assets/gif/gif3.gif";
+import icon4 from "./assets/gif/gif4.gif";
+import icon5 from "./assets/gif/gif5.gif";
+import icon6 from "./assets/gif/gif6.gif";
 
 export const data = [
   {

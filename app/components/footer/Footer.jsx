@@ -52,7 +52,6 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
-
 const navData = [
   {
     id: 0,
@@ -79,9 +78,99 @@ const navData = [
       },
     ],
   },
-  { id: 1, name: "Infrastructure", route: "/infrastructure", subRoutes: [] },
-  { id: 2, name: "Product Range", route: "/products", subRoutes: [] },
-  { id: 3, name: "Sustainability", route: "/sustainability", subRoutes: [] },
+  {
+    id: 1,
+    name: "Infrastructure",
+    route: "/infrastructure",
+    subRoutes: [
+      {
+        id: 0,
+        head: "Sky Textiles.",
+        data: "In publishing and graphic design.",
+        color: "#FFDFE6",
+      },
+      {
+        id: 1,
+        head: "SKY Primwear.",
+        data: "Lorem ipsum is a placeholder text.",
+        color: "#DFDFFD",
+      },
+      {
+        id: 2,
+        head: "SKY International.",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+      {
+        id: 3,
+        head: "SKY International.",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Product Range",
+    route: "/products",
+    subRoutes: [
+      {
+        id: 0,
+        head: "Yarns",
+        data: "In publishing and graphic design.",
+        color: "#FFDFE6",
+      },
+      {
+        id: 1,
+        head: "Fabrics",
+        data: "Lorem ipsum is a placeholder text.",
+        color: "#DFDFFD",
+      },
+      {
+        id: 2,
+        head: "Garments",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Sustainability",
+    route: "/sustainability",
+    subRoutes: [
+      {
+        id: 0,
+        head: "Overview",
+        data: "In publishing and graphic design.",
+        color: "#FFDFE6",
+      },
+      {
+        id: 1,
+        head: "Customer Relations",
+        data: "Lorem ipsum is a placeholder text.",
+        color: "#DFDFFD",
+      },
+      {
+        id: 2,
+        head: "Society",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+      {
+        id: 3,
+        head: "Resource Management",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+      {
+        id: 4,
+        head: "Social Responsiblity",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+    ],
+  },
   {
     id: 4,
     name: "Clients",
@@ -99,10 +188,88 @@ const navData = [
         data: "Lorem ipsum is a placeholder text.",
         color: "#DFDFFD",
       },
+      {
+        id: 2,
+        head: "SKY International.",
+        data: "Lorem ipsum is a placeholder text.",
+        color: "#DFDFFD",
+      },
     ],
   },
-  { id: 5, name: "Why us", route: "/whyus", subRoutes: [] },
-  { id: 6, name: "Get in Touch", route: "/getintouch", subRoutes: [] },
+  {
+    id: 5,
+    name: "Why us",
+    route: "/whyus",
+    subRoutes: [
+      {
+        id: 0,
+        head: "Vertical Setup",
+        data: "In publishing and graphic design.",
+        color: "#FFDFE6",
+      },
+      {
+        id: 1,
+        head: "Cotton Rich  District",
+        data: "Lorem ipsum is a placeholder text.",
+        color: "#DFDFFD",
+      },
+      {
+        id: 2,
+        head: "Compliances",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+      {
+        id: 3,
+        head: "Transparency",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+      {
+        id: 4,
+        head: "Customer Service",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+      {
+        id: 5,
+        head: "EnvironMental Sustainablity",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Get in Touch",
+    route: "/getintouch",
+    subRoutes: [
+      {
+        id: 0,
+        head: "Enquiry",
+        data: "In publishing and graphic design.",
+        color: "#FFDFE6",
+      },
+      {
+        id: 1,
+        head: "Careers",
+        data: "Lorem ipsum is a placeholder text.",
+        color: "#DFDFFD",
+      },
+      {
+        id: 2,
+        head: "Events",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+      {
+        id: 2,
+        head: "Certifications",
+        data: "used to demonstrate the visual.",
+        color: "#DFD5E6",
+      },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -275,13 +442,9 @@ export default function Footer() {
                   <Typography fontWeight={"bold"}>{el.name}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                    blandit leo lobortis eget.
-                  </Typography>
+                  {el.subRoutes.map((d, i) => {
+                    return <Typography>{d?.head}</Typography>;
+                  })}
                 </AccordionDetails>
               </Accordion>
             );
